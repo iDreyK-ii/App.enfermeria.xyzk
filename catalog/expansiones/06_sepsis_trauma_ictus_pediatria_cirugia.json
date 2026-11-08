@@ -1,0 +1,1194 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "Escalas 360 · herramientas adicionales de sepsis, trauma, ictus, pediatría, neonatología y cirugía",
+  "summary": "Ampliación de herramientas hospitalarias. Distingue instrumentos de valoración, cribado, pronóstico, clasificación radiológica, resultados quirúrgicos y enfoques funcionales. Todas estas nuevas fichas son documentales hasta validación profesional, manuales y permisos.",
+  "references": [
+    {
+      "id": "sepsis3",
+      "title": "Sepsis-3 consensus definitions",
+      "organization": "JAMA 2016",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492881",
+      "scope": "SOFA/qSOFA; no usar qSOFA como único cribado."
+    },
+    {
+      "id": "ssc2021",
+      "title": "Surviving Sepsis Campaign Guidelines 2021",
+      "organization": "Intensive Care Medicine",
+      "url": "https://doi.org/10.1007/s00134-021-06506-y",
+      "scope": "Guía de manejo y cribado de sepsis."
+    },
+    {
+      "id": "essalud-sepsis",
+      "title": "Lineamientos clínicos para manejo prehospitalario de sepsis",
+      "organization": "EsSalud / IETSI",
+      "url": "https://www.essalud.gob.pe/ietsi/pdfs/guias/lineamientos_en_situaciones_de_emergencia_v2.pdf",
+      "scope": "Referencia peruana institucional."
+    },
+    {
+      "id": "aaam-ais",
+      "title": "Abbreviated Injury Scale (AIS)",
+      "organization": "AAAM",
+      "url": "https://www.aaam.org/resources/public-position-statements/ais",
+      "scope": "Titular AIS; manual, licencia y formación requeridos."
+    },
+    {
+      "id": "aha-stroke-2026",
+      "title": "2026 Guideline for Acute Ischemic Stroke",
+      "organization": "AHA / ASA",
+      "url": "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513",
+      "scope": "Guía actual de ictus; NIHSS, ASPECTS y contexto de selección."
+    },
+    {
+      "id": "aha-sah-2023",
+      "title": "2023 Guideline for Aneurysmal Subarachnoid Hemorrhage",
+      "organization": "AHA / ASA",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/STR.0000000000000436",
+      "scope": "Hunt-Hess/WFNS y Fisher/modified Fisher."
+    },
+    {
+      "id": "trauma-validation",
+      "title": "Trauma score comparison/validation",
+      "organization": "PubMed indexed study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26815209/",
+      "scope": "Comparación de modelos de severidad en trauma."
+    },
+    {
+      "id": "sas-original",
+      "title": "Sedation-Agitation Scale validation",
+      "organization": "Riker et al. 1999",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10446827/",
+      "scope": "Validación SAS adulto UCI."
+    },
+    {
+      "id": "sedation-review",
+      "title": "Sedation, arousal and agitation in ICU",
+      "organization": "Clinical review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23716308/",
+      "scope": "Revisión SAS/Ramsay y otras escalas."
+    },
+    {
+      "id": "pram-original",
+      "title": "Pediatric Respiratory Assessment Measure",
+      "organization": "Chalut et al. 2008",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18346499/",
+      "scope": "Validación PRAM."
+    },
+    {
+      "id": "pediatric-asthma-review",
+      "title": "Emergency department treatment of asthma in children",
+      "organization": "Clinical review",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/emp2.12224",
+      "scope": "PRAM/PASS/AAIRS; no intercambiar variantes."
+    },
+    {
+      "id": "gorelick",
+      "title": "Clinical signs for pediatric dehydration",
+      "organization": "Gorelick et al. 1997",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9113963/",
+      "scope": "Desarrollo/validación de signos de deshidratación."
+    },
+    {
+      "id": "dehydration-external",
+      "title": "External validation of pediatric dehydration scales",
+      "organization": "PubMed indexed study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24788134/",
+      "scope": "Validación externa de escalas pediátricas."
+    },
+    {
+      "id": "now-aap-2024",
+      "title": "Care of infants with prenatal opioid exposure and NOWS",
+      "organization": "AAP 2024",
+      "url": "https://publications.aap.org/pediatrics/article/153/2/e2023062871/196385/Advances-in-the-Care-of-Infants-With-Prenatal",
+      "scope": "Finnegan y Eat-Sleep-Console."
+    },
+    {
+      "id": "now-aap-2020",
+      "title": "Neonatal Opioid Withdrawal Syndrome",
+      "organization": "AAP 2020",
+      "url": "https://publications.aap.org/pediatrics/article-abstract/146/5/e2020029074/75310",
+      "scope": "Reporte clínico de NOWS."
+    },
+    {
+      "id": "npass-guideline",
+      "title": "Neonatal Pain and Sedation guideline",
+      "organization": "Health New Zealand 2024",
+      "url": "https://healthshare.health.nz/file/1512/download?token=rEZqZrNh",
+      "scope": "Guía de dolor/sedación neonatal; mantener dimensiones separadas."
+    },
+    {
+      "id": "nrs2002",
+      "title": "Nutritional risk screening NRS-2002",
+      "organization": "Kondrup et al. 2003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12765673/",
+      "scope": "Artículo original NRS-2002."
+    },
+    {
+      "id": "nci-nutrition",
+      "title": "Nutrition in Cancer Care PDQ",
+      "organization": "National Cancer Institute",
+      "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/appetite-loss/nutrition-hp-pdq",
+      "scope": "Cribado nutricional en oncología; límites por herramienta."
+    },
+    {
+      "id": "pgsga",
+      "title": "PG-SGA resources",
+      "organization": "Pt-Global",
+      "url": "https://pt-global.org/pg-sga/",
+      "scope": "Titular/recursos; verificar permiso digital."
+    },
+    {
+      "id": "sort-original",
+      "title": "Surgical Outcome Risk Tool SORT",
+      "organization": "Protopapa et al. 2014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25388883/",
+      "scope": "Desarrollo/validación SORT."
+    },
+    {
+      "id": "possum-validation",
+      "title": "POSSUM and P-POSSUM prediction systems",
+      "organization": "PubMed study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26970177/",
+      "scope": "Comparación; no mezclar variantes."
+    },
+    {
+      "id": "surgical-apgar-original",
+      "title": "An Apgar score for surgery",
+      "organization": "Gawande et al. 2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17254923/",
+      "scope": "Surgical Apgar; no es Apgar neonatal."
+    },
+    {
+      "id": "surgical-apgar-validation",
+      "title": "Surgical Apgar score validation",
+      "organization": "Regenbogen et al. 2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19153322/",
+      "scope": "Validación en 4119 pacientes."
+    },
+    {
+      "id": "clavien-dindo-original",
+      "title": "Classification of surgical complications",
+      "organization": "Dindo et al. 2004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15273542/",
+      "scope": "Desarrollo original Clavien-Dindo."
+    },
+    {
+      "id": "clavien-dindo-update",
+      "title": "Clavien-Dindo classification experience",
+      "organization": "Clavien et al. 2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19638912/",
+      "scope": "Actualización y experiencia de aplicación."
+    }
+  ],
+  "instruments": [
+    {
+      "id": "sofa",
+      "name": "SOFA",
+      "category": "Sepsis y disfunción orgánica",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "infection",
+        "icu-adult",
+        "medicine",
+        "emergency"
+      ],
+      "purpose": "Describir disfunción orgánica en adultos críticos.",
+      "what_it_assesses": "Seis dominios: respiratorio, coagulación, hepático, cardiovascular, neurológico y renal.",
+      "nursing_context": "Registrar parámetros con hora/unidades; no calcular datos ausentes ni usar como diagnóstico aislado.",
+      "source_ids": [
+        "sepsis3",
+        "ssc2021",
+        "essalud-sepsis"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "qsofa",
+      "name": "qSOFA",
+      "category": "Sepsis y alerta clínica",
+      "classType": "cribado_alerta",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "infection",
+        "emergency",
+        "medicine",
+        "icu-adult"
+      ],
+      "purpose": "Reconocer posible mayor riesgo de desenlace desfavorable en adulto con sospecha de infección.",
+      "what_it_assesses": "Tres variables: frecuencia respiratoria, presión arterial sistólica y estado mental.",
+      "nursing_context": "No es diagnóstico ni único cribado para descartar sepsis; no sustituye evaluación completa.",
+      "source_ids": [
+        "sepsis3",
+        "ssc2021",
+        "essalud-sepsis"
+      ],
+      "visual_prototype": "alert",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "sirs",
+      "name": "Criterios SIRS",
+      "category": "Inflamación sistémica",
+      "classType": "criterios_clinicos",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "infection",
+        "emergency",
+        "icu-adult",
+        "medicine",
+        "picu"
+      ],
+      "purpose": "Identificar respuesta inflamatoria sistémica donde el protocolo lo contempla.",
+      "what_it_assesses": "Temperatura, FC, FR/PaCO₂ y leucocitos; los umbrales son dependientes de edad/versión.",
+      "nursing_context": "No equivale a sepsis y puede presentarse sin infección; pediatría exige criterios por edad.",
+      "source_ids": [
+        "sepsis3",
+        "essalud-sepsis"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "shock-index",
+      "name": "Índice de choque (SI)",
+      "category": "Emergencia y hemorragia",
+      "classType": "monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "surgery",
+        "icu-adult",
+        "obstetrics"
+      ],
+      "purpose": "Apoyar reconocimiento de posible compromiso hemodinámico.",
+      "what_it_assesses": "Relación FC/PA sistólica.",
+      "nursing_context": "No es diagnóstico ni reemplaza signos de hipoperfusión; embarazo, edad y fármacos alteran interpretación.",
+      "source_ids": [
+        "essalud-sepsis",
+        "ssc2021"
+      ],
+      "visual_prototype": "alert",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "rts",
+      "name": "Revised Trauma Score (RTS)",
+      "category": "Trauma y emergencia",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "surgery",
+        "icu-adult"
+      ],
+      "purpose": "Apoyar estratificación de gravedad/prognóstico fisiológico en trauma.",
+      "what_it_assesses": "Combina Glasgow, presión arterial sistólica y frecuencia respiratoria en versión definida.",
+      "nursing_context": "No es triaje universal ni valoración enfermera independiente; confirmar versión/codificación.",
+      "source_ids": [
+        "trauma-validation"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "iss",
+      "name": "Injury Severity Score (ISS)",
+      "category": "Trauma y cirugía",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "surgery",
+        "icu-adult"
+      ],
+      "purpose": "Describir severidad anatómica de lesiones múltiples para registro/estudios de trauma.",
+      "what_it_assesses": "Se construye a partir de lesiones AIS por región anatómica.",
+      "nursing_context": "Requiere codificación AIS por personal formado; no inferir desde texto libre o lesión aislada.",
+      "source_ids": [
+        "aaam-ais",
+        "trauma-validation"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "La codificación AIS requiere manual/licencia AAAM y formación; no incorporar tablas sin autorización.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "niss",
+      "name": "New Injury Severity Score (NISS)",
+      "category": "Trauma y cirugía",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "surgery",
+        "icu-adult"
+      ],
+      "purpose": "Cuantificar carga anatómica de lesiones múltiples como variante de ISS.",
+      "what_it_assesses": "Variante que utiliza lesiones más graves según definición publicada.",
+      "nursing_context": "No intercambiar con ISS; necesita codificación AIS verificada.",
+      "source_ids": [
+        "aaam-ais",
+        "trauma-validation"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "ais",
+      "name": "Abbreviated Injury Scale (AIS)",
+      "category": "Trauma y codificación anatómica",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "emergency",
+        "surgery",
+        "icu-adult",
+        "picu"
+      ],
+      "purpose": "Clasificar severidad anatómica de una lesión individual por región corporal.",
+      "what_it_assesses": "Sistema de codificación anatómica con seis niveles.",
+      "nursing_context": "No es score global del paciente ni valoración de Enfermería; confirmar licencia/edición.",
+      "source_ids": [
+        "aaam-ais"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "La codificación oficial requiere manual/licencia AAAM y formación; mostrar solo definición y enlace.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "triss",
+      "name": "TRISS",
+      "category": "Trauma y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "surgery",
+        "icu-adult"
+      ],
+      "purpose": "Estimar probabilidad de supervivencia tras trauma en cohortes.",
+      "what_it_assesses": "Combina RTS, ISS, edad y tipo de trauma en versión definida.",
+      "nursing_context": "No es triaje ni pronóstico individual cierto; coeficientes/calibración dependen de población.",
+      "source_ids": [
+        "trauma-validation"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "hunt-hess",
+      "name": "Hunt and Hess Grade",
+      "category": "Neurología y hemorragia subaracnoidea",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "icu-adult",
+        "neurology",
+        "surgery"
+      ],
+      "purpose": "Clasificar gravedad clínica inicial de hemorragia subaracnoidea aneurismática.",
+      "what_it_assesses": "Escala clínica ordinal citada por guía AHA/ASA.",
+      "nursing_context": "No sustituye examen neurológico/neuroimagen; no mezclar con WFNS/Fisher.",
+      "source_ids": [
+        "aha-sah-2023"
+      ],
+      "visual_prototype": "neurologic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "wfns",
+      "name": "WFNS SAH Scale",
+      "category": "Neurología y hemorragia subaracnoidea",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "icu-adult",
+        "neurology",
+        "surgery"
+      ],
+      "purpose": "Describir severidad clínica de HSA aneurismática mediante Glasgow y déficit focal.",
+      "what_it_assesses": "Clasificación clínica WFNS.",
+      "nursing_context": "No intercambiar con escalas radiológicas Fisher/modified Fisher.",
+      "source_ids": [
+        "aha-sah-2023"
+      ],
+      "visual_prototype": "neurologic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "fisher-sah",
+      "name": "Fisher Scale",
+      "category": "Neurología y neuroimagen",
+      "classType": "clasificacion_imagen",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "icu-adult",
+        "neurology",
+        "surgery"
+      ],
+      "purpose": "Clasificar carga de sangre subaracnoidea en TC.",
+      "what_it_assesses": "Clasificación radiológica según patrón/cantidad de sangre.",
+      "nursing_context": "No es evaluación de Enfermería ni severidad clínica; Fisher y modified Fisher difieren.",
+      "source_ids": [
+        "aha-sah-2023"
+      ],
+      "visual_prototype": "neurologic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "modified-fisher",
+      "name": "Modified Fisher Scale",
+      "category": "Neurología y neuroimagen",
+      "classType": "clasificacion_imagen",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "icu-adult",
+        "neurology",
+        "surgery"
+      ],
+      "purpose": "Clasificar sangre subaracnoidea/intraventricular en TC.",
+      "what_it_assesses": "Versión modificada que distingue carga de sangre e HIC intraventricular.",
+      "nursing_context": "No mezclar categorías con Fisher original; requiere lectura especializada.",
+      "source_ids": [
+        "aha-sah-2023"
+      ],
+      "visual_prototype": "neurologic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "ich-score",
+      "name": "ICH Score",
+      "category": "Neurología y hemorragia intracerebral",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "icu-adult",
+        "neurology",
+        "surgery"
+      ],
+      "purpose": "Describir variables pronósticas de hemorragia intracerebral espontánea en cohortes.",
+      "what_it_assesses": "Modelo con variables clínicas y radiológicas.",
+      "nursing_context": "No usar para limitar tratamiento ni predecir con certeza el desenlace individual.",
+      "source_ids": [
+        "aha-stroke-2026",
+        "aha-sah-2023"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "aspects",
+      "name": "ASPECTS",
+      "category": "Neurología y neuroimagen",
+      "classType": "clasificacion_imagen",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "icu-adult",
+        "neurology"
+      ],
+      "purpose": "Describir cambios isquémicos tempranos en TC de ictus de circulación anterior.",
+      "what_it_assesses": "Puntuación radiológica de territorios cerebrales.",
+      "nursing_context": "No es escala de Enfermería ni sustituye NIHSS/imagen completa; interpretar según guía actual.",
+      "source_ids": [
+        "aha-stroke-2026"
+      ],
+      "visual_prototype": "neurologic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "abcd2",
+      "name": "ABCD2",
+      "category": "Neurología y AIT",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "neurology",
+        "medicine"
+      ],
+      "purpose": "Estructurar riesgo temprano de ictus después de AIT en contextos estudiados.",
+      "what_it_assesses": "Incluye factores demográficos, PA, características clínicas, duración y diabetes.",
+      "nursing_context": "No diagnostica AIT ni reemplaza evaluación urgente/neuroimagen.",
+      "source_ids": [
+        "aha-stroke-2026"
+      ],
+      "visual_prototype": "clinical-index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "mrs",
+      "name": "Modified Rankin Scale (mRS)",
+      "category": "Neurología y resultados funcionales",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "neurology",
+        "rehab",
+        "medicine"
+      ],
+      "purpose": "Describir discapacidad/independencia global después de ictus u otras condiciones neurológicas.",
+      "what_it_assesses": "Escala ordinal funcional; versión y entrevista deben identificarse.",
+      "nursing_context": "No mide déficit agudo como NIHSS; diferenciar estado basal y actual.",
+      "source_ids": [
+        "aha-stroke-2026"
+      ],
+      "visual_prototype": "functional",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "cincinnati",
+      "name": "Cincinnati Prehospital Stroke Scale",
+      "category": "Emergencia e ictus",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "neurology"
+      ],
+      "purpose": "Apoyar reconocimiento prehospitalario de signos sugestivos de ictus.",
+      "what_it_assesses": "Asimetría facial, caída del brazo y alteración del habla.",
+      "nursing_context": "No confirma ni descarta ictus; activar ruta urgente y registrar última vez bien.",
+      "source_ids": [
+        "aha-stroke-2026"
+      ],
+      "visual_prototype": "triage",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "fast-befast",
+      "name": "FAST / BE-FAST",
+      "category": "Emergencia e ictus",
+      "classType": "recordatorio_cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "emergency",
+        "neurology"
+      ],
+      "purpose": "Recordar señales de alarma de ictus y acelerar respuesta.",
+      "what_it_assesses": "Mnemotecnia de equilibrio, ojos, cara, brazo, habla y tiempo en BE-FAST; FAST es variante más breve.",
+      "nursing_context": "No es score numérico ni diagnóstico; no esperar que todos los signos estén presentes.",
+      "source_ids": [
+        "aha-stroke-2026"
+      ],
+      "visual_prototype": "triage",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "sas",
+      "name": "Riker Sedation-Agitation Scale (SAS)",
+      "category": "UCI adulto y sedación",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "emergency",
+        "recovery"
+      ],
+      "purpose": "Describir niveles de sedación/agitación en adultos críticos.",
+      "what_it_assesses": "Escala observacional de siete niveles.",
+      "nursing_context": "No intercambiar con RASS; usar sistema local con formación; no derivar dosis/objetivos automáticamente.",
+      "source_ids": [
+        "sas-original",
+        "sedation-review"
+      ],
+      "visual_prototype": "uci",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "ramsay",
+      "name": "Ramsay Sedation Scale",
+      "category": "Sedación y recuperación",
+      "classType": "valoracion_interdisciplinaria",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "recovery",
+        "operating-room"
+      ],
+      "purpose": "Describir respuesta durante sedación mediante niveles ordenados.",
+      "what_it_assesses": "Escala histórica de seis niveles; evaluación basada en respuesta.",
+      "nursing_context": "No confundir con RASS/SAS; usar versión y frecuencia del protocolo local.",
+      "source_ids": [
+        "sedation-review"
+      ],
+      "visual_prototype": "uci",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "n-pass",
+      "name": "N-PASS",
+      "category": "Dolor y sedación neonatal",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology",
+        "picu"
+      ],
+      "purpose": "Valorar dolor/agitación y sedación neonatal en contextos definidos.",
+      "what_it_assesses": "Dominios conductuales/fisiológicos; dimensiones de dolor y sedación separadas.",
+      "nursing_context": "No mezclar dimensiones; corrección por edad gestacional solo si versión lo requiere.",
+      "source_ids": [
+        "npass-guideline"
+      ],
+      "visual_prototype": "neonatal",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "finnegan",
+      "name": "Modified Finnegan Neonatal Abstinence Scoring Tool",
+      "category": "Neonatología y abstinencia neonatal",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology",
+        "picu"
+      ],
+      "purpose": "Observar signos de síndrome de abstinencia neonatal/NOWS cuando protocolo lo emplea.",
+      "what_it_assesses": "Sistema por múltiples dominios; hay variantes/adaptaciones.",
+      "nursing_context": "No mezclar original, MOTHER-modified y otras versiones; requiere formación y frecuencia del protocolo.",
+      "source_ids": [
+        "now-aap-2024",
+        "now-aap-2020"
+      ],
+      "visual_prototype": "neonatal",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Confirmar licencia, traducción y versión antes de reproducir la herramienta.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "eat-sleep-console",
+      "name": "Eat, Sleep, Console (ESC)",
+      "category": "Neonatología y abstinencia neonatal",
+      "classType": "herramienta_funcional",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology",
+        "picu"
+      ],
+      "purpose": "Organizar valoración funcional neonatal con exposición prenatal a opioides en enfoque centrado en bebé/familia.",
+      "what_it_assesses": "Capacidad de comer, dormir y consolarse como dominios funcionales.",
+      "nursing_context": "No es escala numérica ni suma puntos; requiere protocolo y equipo interdisciplinario.",
+      "source_ids": [
+        "now-aap-2024",
+        "now-aap-2020"
+      ],
+      "visual_prototype": "neonatal",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "pram",
+      "name": "PRAM",
+      "category": "Pediatría y asma",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "emergency",
+        "pediatrics",
+        "picu"
+      ],
+      "purpose": "Cuantificar signos de severidad de asma aguda pediátrica en contexto validado.",
+      "what_it_assesses": "Instrumento de cinco dominios clínicos/respiratorios.",
+      "nursing_context": "No es diagnóstico ni prescribe tratamiento por sí solo; edad/protocolo importan.",
+      "source_ids": [
+        "pram-original",
+        "pediatric-asthma-review"
+      ],
+      "visual_prototype": "respiratory",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "pass-asthma",
+      "name": "Pediatric Asthma Severity Score (PASS)",
+      "category": "Pediatría y asma",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "emergency",
+        "pediatrics",
+        "picu"
+      ],
+      "purpose": "Estructurar valoración clínica de severidad de asma pediátrica en servicios que usan esta versión.",
+      "what_it_assesses": "Considera sibilancias, trabajo respiratorio y espiración prolongada según variante.",
+      "nursing_context": "No intercambiar con PRAM/AAIRS ni copiar puntos de corte entre modelos.",
+      "source_ids": [
+        "pediatric-asthma-review"
+      ],
+      "visual_prototype": "respiratory",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "cds-dehydration",
+      "name": "Clinical Dehydration Scale (CDS)",
+      "category": "Pediatría y deshidratación",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "emergency",
+        "pediatrics"
+      ],
+      "purpose": "Apoyar valoración clínica de deshidratación pediátrica en población estudiada.",
+      "what_it_assesses": "Apariencia general, ojos, mucosas y lágrimas según versión.",
+      "nursing_context": "No sustituye peso, perfusión, diuresis y juicio clínico; validez depende de población/entorno.",
+      "source_ids": [
+        "dehydration-external"
+      ],
+      "visual_prototype": "pediatrics",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "gorelick",
+      "name": "Gorelick Dehydration Scale",
+      "category": "Pediatría y deshidratación",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "emergency",
+        "pediatrics"
+      ],
+      "purpose": "Apoyar estimación de deshidratación infantil mediante signos clínicos.",
+      "what_it_assesses": "Hay versiones con distinto número de signos; no asumir equivalencia.",
+      "nursing_context": "Identificar versión/población; no indicar tratamiento por puntaje aislado.",
+      "source_ids": [
+        "gorelick",
+        "dehydration-external"
+      ],
+      "visual_prototype": "pediatrics",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "nrs-2002",
+      "name": "NRS-2002",
+      "category": "Nutrición hospitalaria",
+      "classType": "cribado_nutricional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "medicine",
+        "surgery",
+        "oncology",
+        "icu-adult"
+      ],
+      "purpose": "Cribar riesgo nutricional en adultos hospitalizados.",
+      "what_it_assesses": "Integra estado nutricional, severidad de enfermedad y edad.",
+      "nursing_context": "No es diagnóstico nutricional ni equivalente a MUST/MNA; revisar contexto, incluida oncología.",
+      "source_ids": [
+        "nrs2002",
+        "nci-nutrition"
+      ],
+      "visual_prototype": "nutrition",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "pg-sga-sf",
+      "name": "PG-SGA Short Form",
+      "category": "Oncología y nutrición",
+      "classType": "cribado_nutricional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology",
+        "medicine"
+      ],
+      "purpose": "Identificar riesgo nutricional en cáncer mediante formato corto.",
+      "what_it_assesses": "Formato abreviado basado en información comunicada por paciente; diferenciar PG-SGA completa.",
+      "nursing_context": "Verificar propiedad intelectual, permiso electrónico y versión española antes de reproducir.",
+      "source_ids": [
+        "pgsga",
+        "nci-nutrition"
+      ],
+      "visual_prototype": "oncology",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Consultar titular/licencias antes de digitalizar cuestionario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "mst",
+      "name": "Malnutrition Screening Tool (MST)",
+      "category": "Nutrición y oncología",
+      "classType": "cribado_nutricional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Cribar riesgo de malnutrición en adultos.",
+      "what_it_assesses": "Herramienta breve basada en pérdida de peso involuntaria y apetito.",
+      "nursing_context": "No confundir con MUST; utilizar versión validada y ruta nutricional posterior.",
+      "source_ids": [
+        "nci-nutrition"
+      ],
+      "visual_prototype": "nutrition",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "nutriscore",
+      "name": "NUTRISCORE",
+      "category": "Oncología y nutrición",
+      "classType": "cribado_nutricional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology"
+      ],
+      "purpose": "Cribar riesgo nutricional en pacientes oncológicos ambulatorios en contexto estudiado.",
+      "what_it_assesses": "Herramienta derivada de MST con variables oncológicas.",
+      "nursing_context": "Validación específica; no extrapolar a UCI, pediatría u otros servicios.",
+      "source_ids": [
+        "nci-nutrition"
+      ],
+      "visual_prototype": "oncology",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "sort",
+      "name": "SORT",
+      "category": "Centro quirúrgico y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "operating-room",
+        "surgery",
+        "recovery"
+      ],
+      "purpose": "Estimar mortalidad a 30 días en cirugía no cardiaca en población validada.",
+      "what_it_assesses": "Modelo con ASA-PS, urgencia, especialidad, severidad quirúrgica, cáncer y edad.",
+      "nursing_context": "No es valoración enfermera; requiere calibración, población y juicio anestésico.",
+      "source_ids": [
+        "sort-original"
+      ],
+      "visual_prototype": "anesthesia",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "possum",
+      "name": "POSSUM",
+      "category": "Centro quirúrgico y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "operating-room",
+        "surgery"
+      ],
+      "purpose": "Estimar morbilidad/mortalidad quirúrgica mediante variables fisiológicas y operatorias.",
+      "what_it_assesses": "Modelo pronóstico quirúrgico con adaptaciones.",
+      "nursing_context": "No intercambiar POSSUM, P-POSSUM o CR-POSSUM; calibración puede variar.",
+      "source_ids": [
+        "possum-validation"
+      ],
+      "visual_prototype": "anesthesia",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "p-possum",
+      "name": "P-POSSUM",
+      "category": "Centro quirúrgico y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "operating-room",
+        "surgery"
+      ],
+      "purpose": "Estimar mortalidad quirúrgica ajustada en contexto P-POSSUM.",
+      "what_it_assesses": "Adaptación de POSSUM con ecuación distinta.",
+      "nursing_context": "No equivale a POSSUM/SORT; revisar calibración local.",
+      "source_ids": [
+        "possum-validation"
+      ],
+      "visual_prototype": "anesthesia",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "surgical-apgar",
+      "name": "Surgical Apgar Score",
+      "category": "Centro quirúrgico y resultados",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "operating-room",
+        "recovery",
+        "surgery"
+      ],
+      "purpose": "Describir variables intraoperatorias asociadas a riesgo de complicaciones en estudios.",
+      "what_it_assesses": "Modelo de tres variables intraoperatorias con máximo 10 en versión original.",
+      "nursing_context": "No es Apgar neonatal ni valoración general de Enfermería; usar solo si protocolo lo adopta y valida.",
+      "source_ids": [
+        "surgical-apgar-original",
+        "surgical-apgar-validation"
+      ],
+      "visual_prototype": "anesthesia",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "clavien-dindo",
+      "name": "Clavien-Dindo Classification",
+      "category": "Cirugía y complicaciones",
+      "classType": "clasificacion_resultados",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "surgery",
+        "operating-room",
+        "recovery"
+      ],
+      "purpose": "Graduar complicaciones postoperatorias según nivel de intervención requerido.",
+      "what_it_assesses": "Clasificación ordinal I–V y subgrados III/IV en versión oficial.",
+      "nursing_context": "Clasifica resultados/complicaciones, no riesgo preoperatorio ni desempeño de Enfermería; requiere juicio del equipo.",
+      "source_ids": [
+        "clavien-dindo-original",
+        "clavien-dindo-update"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    },
+    {
+      "id": "cci",
+      "name": "Comprehensive Complication Index (CCI)",
+      "category": "Cirugía y resultados",
+      "classType": "indice_resultados",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "surgery",
+        "operating-room",
+        "recovery"
+      ],
+      "purpose": "Resumir carga total de complicaciones posoperatorias en índice continuo derivado de Clavien-Dindo.",
+      "what_it_assesses": "Índice agregado de una o varias complicaciones.",
+      "nursing_context": "No es score de paciente crítico ni valoración enfermera; requiere registro íntegro y método validado.",
+      "source_ids": [
+        "clavien-dindo-original",
+        "clavien-dindo-update"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar versión, formación, traducción y derechos antes de digitalizar formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional y normativa aplicable."
+    }
+  ]
+}
