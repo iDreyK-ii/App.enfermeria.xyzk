@@ -5,6 +5,19 @@ import java.time.LocalDate
 import org.json.JSONArray
 import org.json.JSONObject
 
+internal fun clinicalInstrumentTypeGroup(type: String): String = when {
+    type.contains("carga", true) || type.contains("actividad de enfermería", true) || type.contains("intervención terapéutica", true) || type.contains("actividad terapéutica", true) -> "Carga asistencial"
+    type.contains("triaje", true) -> "Triaje"
+    type.contains("alerta", true) || type.contains("monitoriz", true) -> "Monitorización y alerta"
+    type.contains("cribado", true) -> "Cribado"
+    type.contains("pronóstico", true) || type.contains("pronostico", true) -> "Pronóstico"
+    type.contains("clasificación", true) || type.contains("clasificacion", true) -> "Clasificación"
+    type.contains("funcional", true) -> "Funcionalidad"
+    type.contains("valoración", true) || type.contains("valoracion", true) || type.contains("autoinforme", true) -> "Valoración"
+    type.contains("índice", true) || type.contains("indice", true) || type.contains("indicador", true) -> "Indicadores e índices"
+    else -> "Herramienta clínica"
+}
+
 enum class ClinicalAvailability(val key: String, val label: String) {
     PRACTICE("calculo", "Práctica interactiva"),
     RECORD("registro", "Solo registro"),
@@ -59,7 +72,7 @@ data class ClinicalCatalog(
             (population.isEmpty() || population in it.populations) &&
                 (area.isEmpty() || area == it.area) &&
                 (service.isEmpty() || service in it.services) &&
-                (instrumentType.isEmpty() || instrumentType == it.instrumentType) &&
+                (instrumentType.isEmpty() || clinicalInstrumentTypeGroup(it.instrumentType) == instrumentType) &&
                 (availability == null || availability == it.availability) &&
                 (!withPracticeOnly || it.hasPractice) &&
                 normalized("${it.name} ${it.area} ${it.instrumentType} ${it.services.joinToString(" ")} ${it.purpose} ${it.version}").contains(needle)
