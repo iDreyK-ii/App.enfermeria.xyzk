@@ -60,7 +60,7 @@ La integración debe comprobarse en el proyecto anfitrión, no en este repositor
 Ejecutar además la comprobación del catálogo:
 
 ```bash
-python tools/validate_scale_catalog.py app/src/main/assets/escalas_clinicas_v1.json
+python integration/patch/tools/validate_scale_catalog.py app/src/main/assets/escalas_clinicas_v1.json
 ```
 
 Probar en teléfono vertical y tablet horizontal, modo oscuro, texto ampliado, TalkBack, movimiento reducido, búsqueda/filtros y rutas preexistentes. No publicar como clínicamente validado hasta completar revisión por profesionales de cada servicio.
