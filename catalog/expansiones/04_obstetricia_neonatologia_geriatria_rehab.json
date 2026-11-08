@@ -1,0 +1,649 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "Escalas 360 · obstetricia, neonatología, geriatría y rehabilitación",
+  "summary": "Instrumentos especializados y guías de valoración por población. Los scores pronósticos y los cuestionarios de cribado no son herramientas exclusivas de Enfermería.",
+  "references": [
+    {
+      "id": "bishop",
+      "title": "Inducing labour · NG207",
+      "organization": "NICE",
+      "url": "https://www.nice.org.uk/guidance/ng207/chapter/Recommendations"
+    },
+    {
+      "id": "whoLCG",
+      "title": "WHO Labour Care Guide · User's Manual",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240017566"
+    },
+    {
+      "id": "minsa214",
+      "title": "NTS 214-MINSA/DGIESP-2024 · atención neonatal",
+      "organization": "MINSA · RM 545-2024",
+      "url": "https://www.gob.pe/institucion/minsa/normas-legales/5874349-545-2024-minsa"
+    },
+    {
+      "id": "minsa207",
+      "title": "NTS 207-MINSA/DGIESP-2023 · adulto mayor/VACAM",
+      "organization": "MINSA · RM 789-2023",
+      "url": "https://www.gob.pe/institucion/minsa/normas-legales/4557563-789-2023-minsa"
+    },
+    {
+      "id": "icu",
+      "title": "Scoring systems in the critically ill",
+      "organization": "Critical-care review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887099/"
+    },
+    {
+      "id": "phq",
+      "title": "PHQ Screeners",
+      "organization": "PHQ Screeners",
+      "url": "https://www.phqscreeners.com/select-screener"
+    },
+    {
+      "id": "atsField",
+      "title": "ATS Field Walking Tests",
+      "organization": "American Thoracic Society",
+      "url": "https://site.thoracic.org/assemblies/pr/outcome-measures/field-walking-tests"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "bishop",
+      "name": "Bishop Score",
+      "category": "Obstetricia",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "obstetrics"
+      ],
+      "purpose": "Valorar madurez cervical antes de inducción del parto.",
+      "what_it_assesses": "Dilatación, borramiento/longitud, consistencia, posición cervical y estación fetal.",
+      "nursing_context": "Requiere consentimiento y valoración profesional; utilizar versión y protocolo obstétrico del centro.",
+      "source_ids": [
+        "bishop"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "who-lcg",
+      "name": "WHO Labour Care Guide",
+      "category": "Obstetricia",
+      "classType": "herramienta_monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "obstetrics"
+      ],
+      "purpose": "Apoyar monitorización integral y respetuosa durante trabajo de parto.",
+      "what_it_assesses": "Progresión, bienestar materno-fetal, cuidados de apoyo e intervenciones.",
+      "nursing_context": "No es un score único ni debe mezclarse con partograma de otra versión.",
+      "source_ids": [
+        "whoLCG"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "maternal-shock-index",
+      "name": "Índice de choque obstétrico",
+      "category": "Obstetricia y hemorragia",
+      "classType": "monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "obstetrics",
+        "postpartum",
+        "emergency"
+      ],
+      "purpose": "Apoyar reconocimiento de compromiso hemodinámico materno cuando el protocolo lo contempla.",
+      "what_it_assesses": "Relación entre frecuencia cardiaca y presión arterial sistólica; umbrales dependen de guía.",
+      "nursing_context": "No trasladar umbrales del adulto general al embarazo sin validación ni retrasar atención.",
+      "source_ids": [
+        "whoLCG"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "epds",
+      "name": "EPDS",
+      "category": "Puerperio y salud mental perinatal",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "postpartum",
+        "obstetrics",
+        "mental-health"
+      ],
+      "purpose": "Cribar síntomas depresivos perinatales/posnatales.",
+      "what_it_assesses": "Cuestionario autoinformado de diez ítems; versión española debe identificarse.",
+      "nursing_context": "Cribado, no diagnóstico; respuestas relacionadas con autolesión requieren una ruta de seguridad.",
+      "source_ids": [
+        "phq"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "latch",
+      "name": "LATCH",
+      "category": "Lactancia materna",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "adultos",
+        "neonatos"
+      ],
+      "services": [
+        "postpartum",
+        "neonatology"
+      ],
+      "purpose": "Estructurar observación de aspectos de lactancia y apoyo al amamantamiento.",
+      "what_it_assesses": "LATCH: agarre, deglución audible, tipo de pezón, comodidad y ayuda/posición.",
+      "nursing_context": "No diagnostica producción de leche; valorar la díada madre-RN y contexto.",
+      "source_ids": [
+        "minsa214"
+      ],
+      "visual_prototype": "neonatal-apgar",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "Consultar NTS 214 y protocolo neonatal local."
+    },
+    {
+      "id": "bubble-he",
+      "name": "BUBBLE-HE",
+      "category": "Puerperio",
+      "classType": "recordatorio_clinico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "postpartum",
+        "obstetrics"
+      ],
+      "purpose": "Organizar valoración posparto de sistemas maternos.",
+      "what_it_assesses": "Mnemotecnia/lista de valoración; composición varía por adaptación.",
+      "nursing_context": "No es escala psicométrica universal ni tiene puntuación única.",
+      "source_ids": [
+        "minsa214"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "downes",
+      "name": "Downes",
+      "category": "Neonatología",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology",
+        "picu"
+      ],
+      "purpose": "Describir signos de dificultad respiratoria neonatal según versión.",
+      "what_it_assesses": "Índice neonatal de signos respiratorios.",
+      "nursing_context": "No mezclar con Silverman-Andersen ni indicar soporte por puntuación aislada.",
+      "source_ids": [
+        "minsa214"
+      ],
+      "visual_prototype": "neonatal-apgar",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "Consultar NTS 214 y protocolo neonatal local."
+    },
+    {
+      "id": "crib-ii",
+      "name": "CRIB-II",
+      "category": "UCIN y pronóstico neonatal",
+      "classType": "pronostico",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology"
+      ],
+      "purpose": "Estimar riesgo pronóstico en prematuros o neonatos de muy bajo peso.",
+      "what_it_assesses": "Modelo con características del nacimiento y fisiología.",
+      "nursing_context": "Pronóstico interdisciplinario; requiere población y versión identificadas.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "neonatal-apgar",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "snap-ii",
+      "name": "SNAP-II",
+      "category": "UCIN y pronóstico neonatal",
+      "classType": "pronostico",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology"
+      ],
+      "purpose": "Cuantificar gravedad fisiológica neonatal.",
+      "what_it_assesses": "Score neonatal de fisiología aguda.",
+      "nursing_context": "No mezclar con SNAPPE-II/CRIB-II.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "neonatal-apgar",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "snappe-ii",
+      "name": "SNAPPE-II",
+      "category": "UCIN y pronóstico neonatal",
+      "classType": "pronostico",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology"
+      ],
+      "purpose": "Estimar gravedad/pronóstico en neonatos críticos.",
+      "what_it_assesses": "Extensión de SNAP-II con datos perinatales.",
+      "nursing_context": "No confundir con SNAP-II o CRIB-II.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "neonatal-apgar",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "ntiss",
+      "name": "NTISS",
+      "category": "UCIN y carga asistencial neonatal",
+      "classType": "carga_trabajo",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology"
+      ],
+      "purpose": "Cuantificar intervenciones terapéuticas en cuidados intensivos neonatales.",
+      "what_it_assesses": "Neonatal Therapeutic Intervention Scoring System.",
+      "nursing_context": "No equivale a NAS/TISS-28 ni a score de mortalidad.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "uci",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "prism-iv",
+      "name": "PRISM-IV",
+      "category": "UCI pediátrica y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "picu",
+        "pediatrics"
+      ],
+      "purpose": "Estimar gravedad fisiológica y riesgo pronóstico en niños críticos.",
+      "what_it_assesses": "Modelo de mortalidad para UCIP.",
+      "nursing_context": "No es valoración enfermera ni intercambiable con PIM-3/pSOFA.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "uci",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "pim-3",
+      "name": "PIM-3",
+      "category": "UCI pediátrica y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "picu",
+        "pediatrics"
+      ],
+      "purpose": "Estimar riesgo de mortalidad al ingreso a UCIP.",
+      "what_it_assesses": "Paediatric Index of Mortality, versión 3.",
+      "nursing_context": "No diagnostica ni reemplaza evaluación clínica.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "uci",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "psofa",
+      "name": "pSOFA",
+      "category": "UCI pediátrica y disfunción orgánica",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "picu",
+        "pediatrics"
+      ],
+      "purpose": "Describir disfunción orgánica pediátrica en contexto crítico.",
+      "what_it_assesses": "Adaptación pediátrica de SOFA; criterios por edad y versión.",
+      "nursing_context": "No aplicar SOFA adulto ni usar score aislado para diagnosticar sepsis pediátrica.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "uci",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "comfortneo",
+      "name": "COMFORTneo",
+      "category": "Dolor y confort neonatal",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "neonatos"
+      ],
+      "services": [
+        "neonatology"
+      ],
+      "purpose": "Valorar dolor, estrés o confort en recién nacidos hospitalizados.",
+      "what_it_assesses": "Instrumento observacional neonatal; componentes/interpretación según manual.",
+      "nursing_context": "No intercambiar con COMFORT-B pediátrica; verificar traducción, formación y derechos.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "neonatal-apgar",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "yesavage",
+      "name": "GDS / Yesavage",
+      "category": "Geriatría y estado afectivo",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "mental-health"
+      ],
+      "purpose": "Cribar síntomas depresivos en adultos mayores con versión identificada.",
+      "what_it_assesses": "Existen GDS-15/GDS-30; VACAM contempla valoración afectiva.",
+      "nursing_context": "No mezclar versiones ni diagnosticar depresión solo por puntuación.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "La NTS 207 integra valoración geriátrica; verificar anexo/versión y categoría del establecimiento."
+    },
+    {
+      "id": "frail",
+      "name": "FRAIL",
+      "category": "Geriatría y fragilidad",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "rehab"
+      ],
+      "purpose": "Cribar fragilidad en personas mayores.",
+      "what_it_assesses": "Fatiga, resistencia, deambulación, enfermedades y pérdida de peso.",
+      "nursing_context": "No sustituye valoración geriátrica integral ni prueba de rendimiento.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "cfs",
+      "name": "Clinical Frailty Scale",
+      "category": "Geriatría y fragilidad",
+      "classType": "clasificacion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "icu-adult"
+      ],
+      "purpose": "Describir nivel de fragilidad global en adulto mayor.",
+      "what_it_assesses": "Escala ordinal basada en función/dependencia y fragilidad.",
+      "nursing_context": "No asignar por edad o impresión visual; considerar estado basal y validación.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "edmonton-frail",
+      "name": "Edmonton Frail Scale",
+      "category": "Geriatría y fragilidad",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "rehab"
+      ],
+      "purpose": "Evaluar dominios multidimensionales de fragilidad.",
+      "what_it_assesses": "Cognición, salud general, funcionalidad, apoyo social y otros.",
+      "nursing_context": "No intercambiar con FRAIL/CFS; versión española y permisos pendientes.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "sarc-f",
+      "name": "SARC-F",
+      "category": "Geriatría y sarcopenia",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "rehab"
+      ],
+      "purpose": "Cribar riesgo de sarcopenia mediante dificultades funcionales y fuerza percibida.",
+      "what_it_assesses": "Cinco componentes; algunas variantes incluyen perímetro de pantorrilla.",
+      "nursing_context": "Cribado, no diagnóstico; confirmar fuerza/masa/rendimiento.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "zarit",
+      "name": "Zarit Burden Interview",
+      "category": "Geriatría y apoyo al cuidador",
+      "classType": "valoracion_psicosocial",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "mental-health"
+      ],
+      "purpose": "Valorar carga percibida del cuidador familiar.",
+      "what_it_assesses": "Versiones largas y abreviadas; identificar versión.",
+      "nursing_context": "No diagnostica trastorno mental ni se aplica como dependencia del paciente.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "La NTS 207 integra valoración geriátrica; verificar anexo/versión y categoría del establecimiento."
+    },
+    {
+      "id": "gijon",
+      "name": "Escala sociofamiliar de Gijón",
+      "category": "Geriatría y valoración social",
+      "classType": "valoracion_psicosocial",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "medicine"
+      ],
+      "purpose": "Identificar situación/riesgo sociofamiliar en personas mayores.",
+      "what_it_assesses": "Dimensiones familiar, económica, vivienda, relaciones y apoyo.",
+      "nursing_context": "Versión/umbrales dependen del protocolo; requiere entrevista contextual.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "La NTS 207 integra valoración geriátrica; verificar anexo/versión y categoría del establecimiento."
+    },
+    {
+      "id": "berg",
+      "name": "Berg Balance Scale",
+      "category": "Rehabilitación y equilibrio",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "rehab",
+        "geriatrics",
+        "neurology"
+      ],
+      "purpose": "Evaluar equilibrio estático/dinámico en tareas funcionales.",
+      "what_it_assesses": "Prueba de 14 tareas con protocolo estandarizado.",
+      "nursing_context": "Requiere espacio/supervisión segura; no predecir caídas desde score aislado.",
+      "source_ids": [
+        "atsField"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "sppb",
+      "name": "SPPB",
+      "category": "Geriatría y rendimiento físico",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "rehab"
+      ],
+      "purpose": "Evaluar rendimiento físico de miembros inferiores.",
+      "what_it_assesses": "Batería breve de equilibrio, velocidad de marcha y levantarse de silla.",
+      "nursing_context": "Requiere protocolo/seguridad; no sustituye valoración funcional completa.",
+      "source_ids": [
+        "minsa207"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original. Verificar manual, versión, traducción y permisos antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    }
+  ]
+}
