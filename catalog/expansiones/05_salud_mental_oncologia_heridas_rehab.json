@@ -1,0 +1,884 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "Escalas 360 · salud mental, oncología, heridas y rehabilitación",
+  "summary": "Instrumentos especializados de cribado, pronóstico, seguimiento de heridas, calidad de vida y funcionalidad. Deben permanecer diferenciados por población y versión.",
+  "references": [
+    {
+      "id": "icu",
+      "title": "Scoring systems in the critically ill",
+      "organization": "Critical-care review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887099/"
+    },
+    {
+      "id": "phq",
+      "title": "PHQ Screeners: instruments and versions",
+      "organization": "PHQ Screeners",
+      "url": "https://www.phqscreeners.com/select-screener"
+    },
+    {
+      "id": "pressure",
+      "title": "VA/DoD Clinical Practice Guideline for Pressure Injury Prevention 2026",
+      "organization": "VA/DoD",
+      "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/WRC/PIP/PIP-CPG_2026-Guideline_Final_20261020.pdf"
+    },
+    {
+      "id": "minsa207",
+      "title": "NTS 207-MINSA/DGIESP-2023 · adult older person/VACAM",
+      "organization": "MINSA · RM 789-2023",
+      "url": "https://www.gob.pe/institucion/minsa/normas-legales/4557563-789-2023-minsa"
+    },
+    {
+      "id": "atsField",
+      "title": "ATS Field Walking Tests",
+      "organization": "American Thoracic Society",
+      "url": "https://site.thoracic.org/assemblies/pr/outcome-measures/field-walking-tests"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "hads",
+      "name": "HADS",
+      "category": "Salud mental hospitalaria",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health",
+        "oncology",
+        "medicine"
+      ],
+      "purpose": "Cribar síntomas de ansiedad y depresión en personas con enfermedad física.",
+      "what_it_assesses": "Subescalas diferenciadas para ansiedad y depresión.",
+      "nursing_context": "Cribado, no diagnóstico; versión y traducción deben identificarse.",
+      "source_ids": [
+        "phq"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "cssrs",
+      "name": "C-SSRS",
+      "category": "Salud mental y seguridad",
+      "classType": "cribado_seguridad",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "mental-health",
+        "emergency",
+        "oncology"
+      ],
+      "purpose": "Estructurar exploración de ideación y conducta suicida según versión/población.",
+      "what_it_assesses": "Formas diferentes para cribado, evaluación y seguimiento.",
+      "nursing_context": "No convertir puntuación en predicción; requiere formación y protocolo de seguridad inmediato.",
+      "source_ids": [
+        "phq"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "CLINICAL_REVIEW_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "audit",
+      "name": "AUDIT / AUDIT-C",
+      "category": "Salud mental y consumo de alcohol",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health",
+        "medicine",
+        "emergency"
+      ],
+      "purpose": "Cribar patrón de consumo de alcohol y riesgos relacionados.",
+      "what_it_assesses": "AUDIT de diez ítems y AUDIT-C abreviado; son versiones distintas.",
+      "nursing_context": "Cribado, no diagnóstico; mantener confidencialidad y usar traducción apropiada.",
+      "source_ids": [
+        "phq"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "ciwa-ar",
+      "name": "CIWA-Ar",
+      "category": "Salud mental y abstinencia alcohólica",
+      "classType": "monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health",
+        "medicine",
+        "emergency",
+        "icu-adult"
+      ],
+      "purpose": "Cuantificar síntomas de abstinencia alcohólica en pacientes capaces de comunicarse.",
+      "what_it_assesses": "Escala clínica con síntomas observados y reportados.",
+      "nursing_context": "No utilizar automáticamente en personas que no pueden comunicarse o con delirium grave; no dirigir tratamiento desde app.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "cows",
+      "name": "COWS",
+      "category": "Salud mental y abstinencia opioide",
+      "classType": "monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health",
+        "emergency",
+        "medicine"
+      ],
+      "purpose": "Valorar signos/síntomas de abstinencia de opioides.",
+      "what_it_assesses": "Componentes observados y reportados.",
+      "nursing_context": "No diagnostica dependencia ni determina tratamiento por sí sola.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "aims",
+      "name": "AIMS",
+      "category": "Salud mental y efectos motores",
+      "classType": "valoracion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health"
+      ],
+      "purpose": "Estructurar observación de movimientos involuntarios anormales.",
+      "what_it_assesses": "Abnormal Involuntary Movement Scale; requiere entrenamiento y versión.",
+      "nursing_context": "No identifica etiología por sí sola; utilizar seguimiento longitudinal.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "panss",
+      "name": "PANSS",
+      "category": "Salud mental y síntomas psicóticos",
+      "classType": "valoracion_especializada",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health"
+      ],
+      "purpose": "Cuantificar síntomas positivos, negativos y psicopatología general en valoración especializada.",
+      "what_it_assesses": "Entrevista estructurada y valoración por personal entrenado.",
+      "nursing_context": "No es cribado general; verificar formación, versión y derechos.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Permiso de reproducción/adaptación electrónica pendiente; mostrar solo resumen educativo y fuente.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "ymrs",
+      "name": "YMRS",
+      "category": "Salud mental y síntomas maníacos",
+      "classType": "valoracion_especializada",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "mental-health"
+      ],
+      "purpose": "Cuantificar gravedad de síntomas maníacos en valoración especializada.",
+      "what_it_assesses": "Entrevista y observación clínica.",
+      "nursing_context": "No diagnostica trastorno bipolar ni sustituye evaluación psiquiátrica.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "ecog",
+      "name": "ECOG Performance Status",
+      "category": "Oncología y funcionalidad",
+      "classType": "clasificacion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology",
+        "medicine",
+        "rehab"
+      ],
+      "purpose": "Describir estado funcional en pacientes oncológicos.",
+      "what_it_assesses": "Escala ordinal de desempeño y actividad.",
+      "nursing_context": "No es gravedad tumoral ni calidad de vida; registrar basal y contexto.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "karnofsky",
+      "name": "Karnofsky Performance Status",
+      "category": "Oncología y funcionalidad",
+      "classType": "clasificacion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology",
+        "rehab"
+      ],
+      "purpose": "Describir capacidad funcional e independencia.",
+      "what_it_assesses": "Escala porcentual de capacidad funcional.",
+      "nursing_context": "No confundir con ECOG ni inferir pronóstico sin contexto.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "esas-r",
+      "name": "ESAS-r",
+      "category": "Oncología y cuidados paliativos",
+      "classType": "autoinforme",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology"
+      ],
+      "purpose": "Monitorizar síntomas reportados por pacientes en cuidados paliativos.",
+      "what_it_assesses": "Edmonton Symptom Assessment System revisado.",
+      "nursing_context": "No se limita a dolor ni sustituye valoración clínica; confirmar traducción/versión.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "pps",
+      "name": "PPS",
+      "category": "Cuidados paliativos",
+      "classType": "clasificacion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology"
+      ],
+      "purpose": "Describir estado funcional y actividad en cuidados paliativos.",
+      "what_it_assesses": "Palliative Performance Scale.",
+      "nursing_context": "No es pronóstico exacto ni intercambiable con ECOG/Karnofsky; verificar licencia/versión.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Permiso de reproducción/adaptación electrónica pendiente; mostrar solo resumen educativo y fuente.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "ppi",
+      "name": "PPI",
+      "category": "Cuidados paliativos y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology"
+      ],
+      "purpose": "Apoyar estimación pronóstica en pacientes paliativos avanzados en poblaciones estudiadas.",
+      "what_it_assesses": "Palliative Prognostic Index; dimensiones clínicas/funcionales.",
+      "nursing_context": "No es pronóstico individual exacto ni criterio para limitar atención.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "spict",
+      "name": "SPICT",
+      "category": "Cuidados paliativos y necesidades",
+      "classType": "identificacion_necesidades",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "oncology",
+        "geriatrics"
+      ],
+      "purpose": "Identificar indicadores de deterioro y necesidades de cuidados paliativos.",
+      "what_it_assesses": "Herramienta con versiones por población.",
+      "nursing_context": "No es score pronóstico ni criterio único de derivación.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "mascc",
+      "name": "MASCC Risk Index",
+      "category": "Oncología y neutropenia febril",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology",
+        "emergency"
+      ],
+      "purpose": "Estratificar riesgo de complicaciones en neutropenia febril.",
+      "what_it_assesses": "Índice pronóstico MASCC.",
+      "nursing_context": "No reemplaza evaluación inmediata ni indica manejo ambulatorio por sí solo.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "cisne",
+      "name": "CISNE",
+      "category": "Oncología y neutropenia febril",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "oncology",
+        "emergency"
+      ],
+      "purpose": "Estimar complicaciones en neutropenia febril aparentemente estable en población específica.",
+      "what_it_assesses": "Clinical Index of Stable Febrile Neutropenia.",
+      "nursing_context": "No usar en pacientes inestables ni extrapolar a todas las neoplasias.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "wallace-nine",
+      "name": "Regla de los nueve de Wallace",
+      "category": "Quemados",
+      "classType": "valoracion_extension",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "emergency",
+        "icu-adult"
+      ],
+      "purpose": "Estimar porcentaje de superficie corporal quemada en adultos.",
+      "what_it_assesses": "Distribución anatómica por regiones.",
+      "nursing_context": "No sustituye Lund-Browder en niños ni mide profundidad.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "lund-browder",
+      "name": "Lund y Browder",
+      "category": "Quemados",
+      "classType": "valoracion_extension",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "burns-wounds",
+        "emergency",
+        "picu"
+      ],
+      "purpose": "Estimar porcentaje de superficie corporal quemada ajustado por edad.",
+      "what_it_assesses": "Tabla anatómica por segmentos y edad.",
+      "nursing_context": "Requiere versión y entrenamiento; no confundir superficie y profundidad.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "baux",
+      "name": "Índice de Baux",
+      "category": "Quemados y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "icu-adult"
+      ],
+      "purpose": "Apoyar estimación pronóstica en quemaduras extensas.",
+      "what_it_assesses": "Modelo histórico de edad y porcentaje de superficie quemada.",
+      "nursing_context": "No es pronóstico individual ni criterio para limitar tratamiento.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "revised-baux",
+      "name": "Índice de Baux revisado",
+      "category": "Quemados y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "icu-adult"
+      ],
+      "purpose": "Ajustar estimación pronóstica con variables adicionales.",
+      "what_it_assesses": "Modelo revisado incorpora factores respiratorios en versión definida.",
+      "nursing_context": "No equivale a criterio de reanimación ni pronóstico individual.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "absi",
+      "name": "ABSI",
+      "category": "Quemados y pronóstico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "burns-wounds",
+        "icu-adult"
+      ],
+      "purpose": "Estimar severidad/pronóstico de quemaduras.",
+      "what_it_assesses": "Abbreviated Burn Severity Index.",
+      "nursing_context": "Población/versiones importan; no clasifica profundidad ni decide atención por sí sola.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "push",
+      "name": "PUSH Tool",
+      "category": "Heridas y lesiones por presión",
+      "classType": "seguimiento_herida",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "ostomy",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Monitorear evolución de lesiones por presión por tamaño, exudado y tejido.",
+      "what_it_assesses": "Pressure Ulcer Scale for Healing.",
+      "nursing_context": "Diferenciar de Braden/Norton; verificar versión y permisos.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "heridas",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "bwat",
+      "name": "BWAT",
+      "category": "Heridas y valoración",
+      "classType": "valoracion_herida",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "ostomy",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Estructurar valoración descriptiva de heridas crónicas.",
+      "what_it_assesses": "Bates-Jensen Wound Assessment Tool.",
+      "nursing_context": "No confundir con PUSH; la puntuación no diagnostica infección.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "heridas",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "time",
+      "name": "TIME",
+      "category": "Heridas y cuidado local",
+      "classType": "marco_valoracion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "ostomy"
+      ],
+      "purpose": "Organizar valoración del lecho de herida para revisión del cuidado local.",
+      "what_it_assesses": "Tissue, Infection/Inflammation, Moisture, Edge.",
+      "nursing_context": "Marco conceptual, no score universal ni prescripción de apósitos.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "heridas",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "resvech",
+      "name": "RESVECH 2.0",
+      "category": "Heridas crónicas",
+      "classType": "seguimiento_herida",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "ostomy"
+      ],
+      "purpose": "Valorar estado/evolución de heridas crónicas.",
+      "what_it_assesses": "Instrumento de valoración/seguimiento.",
+      "nursing_context": "Fijar versión española y permisos; no mezclar con PUSH/BWAT.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "heridas",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "det",
+      "name": "DET Score",
+      "category": "Ostomías y piel periestomal",
+      "classType": "valoracion_piel",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "ostomy",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Describir complicaciones de piel periestomal.",
+      "what_it_assesses": "Dominios de cambio de color, erosión y crecimiento tisular según herramienta.",
+      "nursing_context": "No confundir con SACS ni usar como diagnóstico dermatológico.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "sacs",
+      "name": "SACS",
+      "category": "Ostomías y piel periestomal",
+      "classType": "clasificacion_herida",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "ostomy",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Clasificar localización/características de lesiones periestomales.",
+      "what_it_assesses": "Sistema SACS según manual.",
+      "nursing_context": "No intercambiar con DET; confirmar versión/derechos.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "wound-qol",
+      "name": "Wound-QoL",
+      "category": "Heridas y calidad de vida",
+      "classType": "autoinforme",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "burns-wounds",
+        "ostomy",
+        "rehab"
+      ],
+      "purpose": "Medir impacto de heridas crónicas en calidad de vida reportada.",
+      "what_it_assesses": "Cuestionario de calidad de vida relacionado con heridas.",
+      "nursing_context": "Autoinforme; no mide cicatrización ni riesgo; revisar traducción/licencia.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "heridas",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "fim",
+      "name": "FIM",
+      "category": "Rehabilitación y funcionalidad",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "rehab",
+        "neurology",
+        "geriatrics"
+      ],
+      "purpose": "Describir independencia funcional y necesidad de asistencia en rehabilitación.",
+      "what_it_assesses": "Functional Independence Measure; dominios motores y cognitivos.",
+      "nursing_context": "Requiere licencia/condiciones de reproducción; no confundir con Barthel/Katz.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Permiso de reproducción/adaptación electrónica pendiente; mostrar solo resumen educativo y fuente.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "fugl-meyer",
+      "name": "Fugl-Meyer Assessment",
+      "category": "Rehabilitación neurológica",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "rehab",
+        "neurology"
+      ],
+      "purpose": "Cuantificar alteraciones motoras/sensoriomotoras tras ictus.",
+      "what_it_assesses": "Dominios motores, sensitivos, equilibrio y otros módulos.",
+      "nursing_context": "Requiere formación y formulario/version; no sustituye evaluación integral.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "brunnstrom",
+      "name": "Brunnstrom stages",
+      "category": "Rehabilitación neurológica",
+      "classType": "clasificacion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "rehab",
+        "neurology"
+      ],
+      "purpose": "Describir etapas de recuperación motora tras lesión neurológica.",
+      "what_it_assesses": "Clasificación por patrones de sinergia y control motor.",
+      "nursing_context": "No es pronóstico universal ni equivalente a Fugl-Meyer.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "ashworth",
+      "name": "Ashworth modificada",
+      "category": "Rehabilitación neurológica",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "rehab",
+        "neurology",
+        "pediatrics"
+      ],
+      "purpose": "Clasificar resistencia al movimiento pasivo en valoración del tono muscular.",
+      "what_it_assesses": "Escala ordinal de resistencia durante movilización pasiva.",
+      "nursing_context": "No mide fuerza ni espasticidad de forma aislada; técnica/velocidad/articulación importan.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    },
+    {
+      "id": "mrc-muscle",
+      "name": "MRC Muscle Strength Scale",
+      "category": "Rehabilitación y fuerza muscular",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "rehab",
+        "neurology",
+        "icu-adult"
+      ],
+      "purpose": "Describir fuerza muscular mediante exploración manual.",
+      "what_it_assesses": "Escala ordinal de fuerza MRC; MRC sum score es aplicación distinta.",
+      "nursing_context": "No mide resistencia/fatiga; técnica y grupos musculares deben estandarizarse.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Síntesis educativa original; verificar manual, versión, traducción y permiso antes de reproducir formularios.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo institucional."
+    }
+  ]
+}

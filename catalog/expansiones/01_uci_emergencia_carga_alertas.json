@@ -1,0 +1,532 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "Escalas 360 · UCI, emergencia y deterioro clínico",
+  "summary": "Primer bloque ampliado: carga asistencial crítica, gravedad/pronóstico, triaje y alerta temprana. TISS-28/TISS-76/NAS/NEMS se mantienen como instrumentos diferentes.",
+  "services": [
+    {
+      "id": "emergency",
+      "name": "Emergencia y triaje"
+    },
+    {
+      "id": "icu-adult",
+      "name": "UCI adulto"
+    },
+    {
+      "id": "medicine",
+      "name": "Medicina interna y hospitalización"
+    },
+    {
+      "id": "surgery",
+      "name": "Cirugía y hospitalización quirúrgica"
+    },
+    {
+      "id": "obstetrics",
+      "name": "Obstetricia y sala de partos"
+    },
+    {
+      "id": "postpartum",
+      "name": "Puerperio y alojamiento conjunto"
+    },
+    {
+      "id": "pediatrics",
+      "name": "Pediatría"
+    },
+    {
+      "id": "picu",
+      "name": "UCI pediátrica"
+    },
+    {
+      "id": "infection",
+      "name": "Infecciones y sepsis"
+    }
+  ],
+  "references": [
+    {
+      "id": "tiss",
+      "title": "TISS-28: Simplified Therapeutic Intervention Scoring System",
+      "organization": "Miranda et al. · Critical Care Medicine 1996",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8565541/",
+      "type": "Artículo original"
+    },
+    {
+      "id": "nas",
+      "title": "Nursing Activities Score",
+      "organization": "Miranda et al. · Critical Care Medicine 2003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12576939/",
+      "type": "Artículo original"
+    },
+    {
+      "id": "nems",
+      "title": "Nine Equivalents of Nursing Manpower Use Score",
+      "organization": "Reis Miranda et al. · Intensive Care Medicine 1997",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9290990/",
+      "type": "Artículo original"
+    },
+    {
+      "id": "icu",
+      "title": "Scoring systems in the critically ill",
+      "organization": "Critical-care review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887099/",
+      "type": "Revisión secundaria"
+    },
+    {
+      "id": "esi5",
+      "title": "Emergency Severity Index Handbook, 5th edition",
+      "organization": "Emergency Nurses Association",
+      "url": "https://d1w2w5dpazlk1u.cloudfront.net/ENA/pdf/729e51c2-2e61-4a39-ba83-441d729c71d1.pdf",
+      "type": "Manual oficial"
+    },
+    {
+      "id": "sats",
+      "title": "South African Triage Scale",
+      "organization": "Emergency Medicine Society of South Africa",
+      "url": "https://emssa.org.za/special-interest-groups/the-south-african-triage-scale-sats/",
+      "type": "Manual oficial"
+    },
+    {
+      "id": "whoLCG",
+      "title": "WHO Labour Care Guide · User's Manual",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240017566",
+      "type": "Manual OMS"
+    },
+    {
+      "id": "essaludFalls",
+      "title": "Directiva de prácticas seguras para la prevención de caídas",
+      "organization": "EsSalud",
+      "url": "https://repositorio.essalud.gob.pe/bitstream/handle/20.500.12959/2069/Directiva%20de%20pr%C3%A1cticas%20seguras%20para%20la%20prevenci%C3%B3n%20de%20ca%C3%ADdas%20de%20pacientes.pdf?sequence=1",
+      "type": "Directiva peruana"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "tiss-28",
+      "name": "TISS-28",
+      "category": "Carga asistencial en UCI",
+      "classType": "Intervención terapéutica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "medicine",
+        "emergency"
+      ],
+      "purpose": "Cuantifica intervenciones terapéuticas seleccionadas para describir intensidad de recursos en UCI.",
+      "what_it_assesses": "Versión abreviada de 28 ítems agrupados en áreas de intervención. No mide directamente minutos reales de Enfermería.",
+      "nursing_context": "Registrar intervenciones realizadas en el periodo de la unidad y utilizar el resultado para análisis de recursos, no como diagnóstico ni pronóstico individual.",
+      "source_ids": [
+        "tiss",
+        "icu"
+      ],
+      "visual_prototype": "workload",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "tiss-76",
+      "name": "TISS-76",
+      "category": "Carga asistencial en UCI",
+      "classType": "Intervención terapéutica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "medicine"
+      ],
+      "purpose": "Versión histórica ampliada del Therapeutic Intervention Scoring System para describir intervenciones/recursos en cuidados críticos.",
+      "what_it_assesses": "Sistema de 76 ítems; antecedente del TISS-28.",
+      "nursing_context": "No mezclar los ítems ni pesos de TISS-76 y TISS-28; no presentarlo como medida directa de tiempo enfermero.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "workload",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "nas",
+      "name": "NAS",
+      "category": "Carga de trabajo de Enfermería",
+      "classType": "Actividad de Enfermería",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "picu"
+      ],
+      "purpose": "Estima la proporción de tiempo de Enfermería consumido por actividades de atención durante 24 horas.",
+      "what_it_assesses": "23 ítems/subítems que incluyen cuidados directos e indirectos, apoyo a paciente/familia y tareas organizativas.",
+      "nursing_context": "Registrar las actividades realmente realizadas en la ventana temporal definida; se utiliza para análisis de carga/dotación, no para medir gravedad fisiológica.",
+      "source_ids": [
+        "nas",
+        "icu"
+      ],
+      "visual_prototype": "workload",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "nems",
+      "name": "NEMS",
+      "category": "Carga asistencial en UCI",
+      "classType": "Actividad terapéutica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult"
+      ],
+      "purpose": "Obtiene una medida simplificada de actividad terapéutica y uso de recursos de personal en UCI.",
+      "what_it_assesses": "Índice abreviado con nueve equivalentes de actividad.",
+      "nursing_context": "No es equivalente a NAS ni sustituye TISS-28; ofrece menos detalle sobre tiempo total de Enfermería.",
+      "source_ids": [
+        "nems",
+        "icu"
+      ],
+      "visual_prototype": "workload",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "apache-ii",
+      "name": "APACHE II",
+      "category": "Gravedad y pronóstico en UCI",
+      "classType": "Score pronóstico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Estima gravedad fisiológica y riesgo de mortalidad hospitalaria en cohortes de pacientes críticos.",
+      "what_it_assesses": "Modelo multivariable con variables fisiológicas agudas, edad y salud crónica.",
+      "nursing_context": "Instrumento pronóstico interdisciplinario; no es escala de valoración enfermera ni predicción individual cierta.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "prognostic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "apache-iv",
+      "name": "APACHE IV",
+      "category": "Gravedad y pronóstico en UCI",
+      "classType": "Score pronóstico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult"
+      ],
+      "purpose": "Modelo posterior de gravedad/pronóstico en pacientes críticos.",
+      "what_it_assesses": "Modelo multivariable que requiere datos de ingreso y calibración de la edición.",
+      "nursing_context": "No equivale a APACHE II; no se debe ofrecer calculadora sin implementación validada.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "prognostic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "saps-ii",
+      "name": "SAPS II",
+      "category": "Gravedad y pronóstico en UCI",
+      "classType": "Score pronóstico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult"
+      ],
+      "purpose": "Estima gravedad y mortalidad hospitalaria en adultos ingresados en UCI.",
+      "what_it_assesses": "Modelo multivariable con variables fisiológicas y características de ingreso.",
+      "nursing_context": "No mide carga de Enfermería; la calibración poblacional limita la interpretación individual.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "prognostic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "saps-iii",
+      "name": "SAPS III",
+      "category": "Gravedad y pronóstico en UCI",
+      "classType": "Score pronóstico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult"
+      ],
+      "purpose": "Evalúa gravedad/pronóstico al ingreso en UCI.",
+      "what_it_assesses": "Modelo multivariable que incorpora variables pre-UCI, motivo y fisiología.",
+      "nursing_context": "No intercambiar ecuaciones/calibraciones regionales con SAPS II.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "prognostic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "mods",
+      "name": "MODS",
+      "category": "Disfunción orgánica en UCI",
+      "classType": "Índice clínico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult",
+        "infection"
+      ],
+      "purpose": "Describe disfunción de múltiples órganos en pacientes críticos.",
+      "what_it_assesses": "Índice de dominios de función orgánica; debe identificarse la versión.",
+      "nursing_context": "No es diagnóstico de sepsis ni equivalente a SOFA/APACHE.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "clinical_index",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "mpm",
+      "name": "MPM",
+      "category": "Gravedad y pronóstico en UCI",
+      "classType": "Score pronóstico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "icu-adult"
+      ],
+      "purpose": "Estima probabilidad de mortalidad según modelo y momento de evaluación.",
+      "what_it_assesses": "Modelos multivariables de probabilidad de mortalidad en UCI.",
+      "nursing_context": "No es valoración enfermera; no reproducir coeficientes ni usar una versión no calibrada.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "prognostic",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "esi",
+      "name": "ESI",
+      "category": "Emergencia y triaje",
+      "classType": "Sistema de triaje",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "emergency"
+      ],
+      "purpose": "Clasifica prioridad según necesidad inmediata, alto riesgo y recursos previstos.",
+      "what_it_assesses": "Sistema de cinco niveles con algoritmo estructurado.",
+      "nursing_context": "Requiere formación y versión oficial; no alterar algoritmo ni mezclar umbrales con otros sistemas.",
+      "source_ids": [
+        "esi5"
+      ],
+      "visual_prototype": "triage",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Permiso de reproducción/adaptación digital pendiente; mostrar solo resumen original y fuente.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "manchester",
+      "name": "Manchester Triage System",
+      "category": "Emergencia y triaje",
+      "classType": "Sistema de triaje",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "emergency"
+      ],
+      "purpose": "Prioriza atención mediante motivo de consulta y discriminadores clínicos.",
+      "what_it_assesses": "Sistema de algoritmos por presentación clínica y categorías de prioridad.",
+      "nursing_context": "No intercambiar tiempos/niveles con ESI, CTAS o SATS; requiere formación y versión oficial.",
+      "source_ids": [
+        "essaludFalls"
+      ],
+      "visual_prototype": "triage",
+      "content_mode": "PERMISSION_REQUIRED",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Permiso de reproducción/adaptación digital pendiente; mostrar solo resumen original y fuente.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "ctas",
+      "name": "CTAS",
+      "category": "Emergencia y triaje",
+      "classType": "Sistema de triaje",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "emergency"
+      ],
+      "purpose": "Categoriza la urgencia de pacientes que acuden a emergencia.",
+      "what_it_assesses": "Canadian Triage and Acuity Scale; cinco niveles con adaptaciones por población/contexto.",
+      "nursing_context": "No mezclar niveles/tiempos con ESI/MTS; manual y capacitación necesarios.",
+      "source_ids": [
+        "esi5"
+      ],
+      "visual_prototype": "triage",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "sats",
+      "name": "SATS",
+      "category": "Emergencia y triaje",
+      "classType": "Sistema de triaje",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "emergency",
+        "pediatrics"
+      ],
+      "purpose": "Clasifica urgencia clínica en primer contacto de emergencia.",
+      "what_it_assesses": "Combina discriminadores clínicos, TEWS e investigaciones adicionales.",
+      "nursing_context": "No reducir a un solo puntaje; versión pediátrica utiliza parámetros dependientes de edad/estatura.",
+      "source_ids": [
+        "sats"
+      ],
+      "visual_prototype": "triage",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "mews",
+      "name": "MEWS",
+      "category": "Alerta temprana",
+      "classType": "Alerta de deterioro",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "medicine",
+        "surgery",
+        "emergency",
+        "icu-adult"
+      ],
+      "purpose": "Reconoce cambios fisiológicos y alerta deterioro mediante observaciones seriadas.",
+      "what_it_assesses": "Sistema de alerta temprana con parámetros fisiológicos; existen adaptaciones.",
+      "nursing_context": "Parámetros/umbrales varían entre versiones; un score bajo no excluye deterioro.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "early_warning",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "meows",
+      "name": "MEOWS",
+      "category": "Alerta materna",
+      "classType": "Alerta obstétrica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "obstetrics",
+        "postpartum"
+      ],
+      "purpose": "Detecta deterioro fisiológico materno durante embarazo, parto o puerperio.",
+      "what_it_assesses": "Modified Early Obstetric Warning Score; umbrales dependientes del protocolo.",
+      "nursing_context": "No aplicar NEWS2 adulto ni MEWS general al embarazo sin protocolo obstétrico.",
+      "source_ids": [
+        "whoLCG"
+      ],
+      "visual_prototype": "early_warning",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "mewt",
+      "name": "MEWT",
+      "category": "Alerta materna",
+      "classType": "Activador de respuesta",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "obstetrics",
+        "postpartum"
+      ],
+      "purpose": "Activa evaluación y respuesta ante señales fisiológicas de alarma obstétrica.",
+      "what_it_assesses": "Maternal Early Warning Trigger; sistema de activadores y vía de respuesta.",
+      "nursing_context": "No es sistema universal; utilizar versión y vía institucional.",
+      "source_ids": [
+        "whoLCG"
+      ],
+      "visual_prototype": "early_warning",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Solo síntesis educativa; verificar manual/versión y revisión clínica antes de habilitar formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    }
+  ]
+}

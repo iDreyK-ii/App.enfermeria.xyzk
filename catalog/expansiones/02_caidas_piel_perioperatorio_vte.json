@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "Escalas 360 · prevención de caídas, piel, perioperatorio y TEV",
+  "summary": "Herramientas de prevención y recuperación. La presencia en la biblioteca no convierte cada instrumento en calculadora autorizada.",
+  "references": [
+    {
+      "id": "essaludFalls",
+      "title": "Directiva de prácticas seguras para la prevención de caídas",
+      "organization": "EsSalud",
+      "url": "https://repositorio.essalud.gob.pe/bitstream/handle/20.500.12959/2069/Directiva%20de%20pr%C3%A1cticas%20seguras%20para%20la%20prevenci%C3%B3n%20de%20ca%C3%ADdas%20de%20pacientes.pdf?sequence=1"
+    },
+    {
+      "id": "hendrich",
+      "title": "Validation of the Hendrich II Fall Risk Model",
+      "organization": "Hendrich et al. · Applied Nursing Research 2003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12624858/"
+    },
+    {
+      "id": "pressure",
+      "title": "Clinical Practice Guideline for Pressure Injury Prevention 2026",
+      "organization": "VA/DoD",
+      "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/WRC/PIP/PIP-CPG_2026-Guideline_Final_20261020.pdf"
+    },
+    {
+      "id": "asa",
+      "title": "ASA Physical Status Classification System Statement 2026",
+      "organization": "American Society of Anesthesiologists",
+      "url": "https://doi.org/10.1097/ao9.0000000000000002"
+    },
+    {
+      "id": "minsa214",
+      "title": "NTS 214-MINSA/DGIESP-2024 · atención neonatal",
+      "organization": "MINSA",
+      "url": "https://www.gob.pe/institucion/minsa/normas-legales/5874349-545-2024-minsa"
+    },
+    {
+      "id": "icu",
+      "title": "Scoring systems in the critically ill",
+      "organization": "Critical-care review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887099/"
+    },
+    {
+      "id": "vte",
+      "title": "ASH Guidelines for prevention of venous thromboembolism in hospitalized medical patients",
+      "organization": "American Society of Hematology",
+      "url": "https://ashpublications.org/bloodadvances/article/3/23/3898/429211/ASH-guidelines-for-management-of-venous"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "downton",
+      "name": "Downton",
+      "category": "Prevención de caídas",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "medicine",
+        "surgery"
+      ],
+      "purpose": "Identificar factores asociados al riesgo de caídas en personas mayores.",
+      "what_it_assesses": "Antecedentes, medicación, déficits sensoriales, estado mental y marcha según versión.",
+      "nursing_context": "EsSalud la contempla para adultos mayores en su directiva; usar la versión/población definida.",
+      "source_ids": [
+        "essaludFalls"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "La directiva EsSalud consultada contempla esta herramienta para la población indicada; no implica uso universal en todos los hospitales del Perú."
+    },
+    {
+      "id": "macdems",
+      "name": "Macdems",
+      "category": "Prevención de caídas pediátricas",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "pediatria"
+      ],
+      "services": [
+        "pediatrics",
+        "picu"
+      ],
+      "purpose": "Identificar riesgo de caídas en pacientes pediátricos hospitalizados.",
+      "what_it_assesses": "Herramienta pediátrica mencionada en directiva EsSalud.",
+      "nursing_context": "No extrapolar a adultos ni confundir con Humpty Dumpty; confirmar la versión adoptada.",
+      "source_ids": [
+        "essaludFalls"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "La directiva EsSalud consultada contempla esta herramienta para la población indicada; no implica uso universal en todos los hospitales del Perú."
+    },
+    {
+      "id": "waterlow",
+      "name": "Waterlow",
+      "category": "Prevención de lesiones por presión",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "medicine",
+        "surgery",
+        "icu-adult",
+        "geriatrics"
+      ],
+      "purpose": "Organizar factores de riesgo de lesión por presión.",
+      "what_it_assesses": "Considera movilidad, continencia, nutrición, piel, edad y otros factores según versión.",
+      "nursing_context": "Integrar los factores con inspección cutánea y protocolo local; verificar versión y dirección del puntaje.",
+      "source_ids": [
+        "pressure",
+        "icu"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "hendrich-ii",
+      "name": "Hendrich II",
+      "category": "Prevención de caídas",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "medicine",
+        "surgery",
+        "geriatrics"
+      ],
+      "purpose": "Identificar factores de riesgo de caídas en adultos hospitalizados.",
+      "what_it_assesses": "Modelo original de ocho parámetros validado en hospital agudo.",
+      "nursing_context": "Usar versión y umbral aprobados por el centro; no equiparar automáticamente con Morse/Downton.",
+      "source_ids": [
+        "hendrich"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "stratify",
+      "name": "STRATIFY",
+      "category": "Prevención de caídas",
+      "classType": "valoracion_enfermeria",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "geriatrics",
+        "medicine",
+        "rehab"
+      ],
+      "purpose": "Cribar factores de riesgo de caída en pacientes hospitalizados.",
+      "what_it_assesses": "St Thomas's Risk Assessment Tool in Falling Elderly Inpatients.",
+      "nursing_context": "Su rendimiento depende del contexto; no es universal ni equivalente a escalas locales.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "piel-adulto",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "aldrete",
+      "name": "Aldrete modificada",
+      "category": "Recuperación posanestésica",
+      "classType": "valoracion_interdisciplinaria",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "recovery",
+        "operating-room"
+      ],
+      "purpose": "Valorar recuperación fisiológica inmediata tras anestesia/sedación y apoyar criterios de traslado de URPA.",
+      "what_it_assesses": "Dominios clásicos: actividad, respiración, circulación, conciencia y coloración/saturación según versión.",
+      "nursing_context": "Monitorizar y registrar; no decidir alta solo por una suma ni mezclar puntos de corte.",
+      "source_ids": [
+        "asa",
+        "minsa214"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "bromage",
+      "name": "Bromage modificada",
+      "category": "Recuperación posanestésica",
+      "classType": "valoracion_interdisciplinaria",
+      "populations": [
+        "adultos",
+        "obstetricia"
+      ],
+      "services": [
+        "recovery",
+        "operating-room",
+        "obstetrics"
+      ],
+      "purpose": "Describir grado de bloqueo motor tras anestesia regional/neuroaxial.",
+      "what_it_assesses": "Clasificación ordinal de movilidad de miembros inferiores; existen variantes.",
+      "nursing_context": "Identificar versión exacta; no representa nivel sensitivo ni es único criterio de alta.",
+      "source_ids": [
+        "minsa214"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "asa-ps",
+      "name": "ASA Physical Status",
+      "category": "Evaluación preanestésica",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "operating-room",
+        "recovery"
+      ],
+      "purpose": "Comunicar estado físico/comorbilidad antes de anestesia.",
+      "what_it_assesses": "Clasificación ASA I–VI con modificador de emergencia cuando corresponda.",
+      "nursing_context": "No es score de riesgo quirúrgico total; la asignación corresponde a anestesiología.",
+      "source_ids": [
+        "asa"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "apfel",
+      "name": "Apfel simplificado",
+      "category": "Anestesia y recuperación",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "operating-room",
+        "recovery"
+      ],
+      "purpose": "Estimar riesgo de náuseas/vómitos posoperatorios.",
+      "what_it_assesses": "Modelo simplificado de factores conocidos para PONV.",
+      "nursing_context": "No diagnostica ni decide profilaxis farmacológica por sí solo.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "stop-bang",
+      "name": "STOP-Bang",
+      "category": "Evaluación preanestésica",
+      "classType": "cribado",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "operating-room",
+        "recovery"
+      ],
+      "purpose": "Cribar riesgo de apnea obstructiva del sueño en adultos.",
+      "what_it_assesses": "Ocho componentes de síntomas, presión arterial, antropometría y edad.",
+      "nursing_context": "Cribado, no diagnóstico; usar versión y contexto apropiados.",
+      "source_ids": [
+        "asa"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "caprini",
+      "name": "Caprini VTE Risk Assessment",
+      "category": "Prevención de tromboembolismo venoso",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "surgery",
+        "operating-room",
+        "oncology"
+      ],
+      "purpose": "Estratificar factores de riesgo de TEV, sobre todo en población quirúrgica.",
+      "what_it_assesses": "Modelo de factores de riesgo ponderados; existen variantes.",
+      "nursing_context": "Versión/protocolo determinan conducta; no prescribir anticoagulación desde el score.",
+      "source_ids": [
+        "vte"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "padua",
+      "name": "Padua Prediction Score",
+      "category": "Prevención de tromboembolismo venoso",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "medicine",
+        "oncology"
+      ],
+      "purpose": "Estratificar riesgo de TEV en pacientes médicos hospitalizados.",
+      "what_it_assesses": "Modelo desarrollado para población médica no quirúrgica.",
+      "nursing_context": "No intercambiar con Caprini o IMPROVE; profilaxis sigue guía local.",
+      "source_ids": [
+        "vte"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    },
+    {
+      "id": "improve-vte",
+      "name": "IMPROVE VTE",
+      "category": "Prevención de tromboembolismo venoso",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "medicine",
+        "oncology",
+        "icu-adult"
+      ],
+      "purpose": "Estimar riesgo de TEV en pacientes hospitalizados médicos.",
+      "what_it_assesses": "Modelo con variables clínicas/antecedentes; existen herramientas IMPROVE diferenciadas.",
+      "nursing_context": "Separar IMPROVE-VTE de IMPROVE-bleeding; no usar para tratamiento automático.",
+      "source_ids": [
+        "vte"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. No se copia formulario oficial; verificar derechos, versión y entrenamiento antes de digitalizar.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo del establecimiento."
+    }
+  ]
+}

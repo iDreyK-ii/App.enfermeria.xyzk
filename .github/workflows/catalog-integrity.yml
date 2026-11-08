@@ -1,0 +1,24 @@
+name: Escalas 360 catalog integrity
+on:
+  push:
+    branches: ["integracion/escalas360-native"]
+    paths:
+      - "catalog/merged/**"
+      - "integration/patch/tools/**"
+      - ".github/workflows/catalog-integrity.yml"
+  pull_request:
+    paths:
+      - "catalog/merged/**"
+      - "integration/patch/tools/**"
+      - ".github/workflows/catalog-integrity.yml"
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate 191 instruments, routes, services and sources
+        run: python integration/patch/tools/validate_scale_catalog.py catalog/merged/escalas_clinicas_v2_191_fichas.json

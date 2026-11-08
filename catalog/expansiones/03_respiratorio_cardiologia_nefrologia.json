@@ -1,0 +1,577 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "Escalas 360 · neumología, cardiología y nefrología",
+  "summary": "Instrumentos pronósticos, de monitorización y clasificación clínica; no todos son escalas de Enfermería.",
+  "references": [
+    {
+      "id": "cap",
+      "title": "Diagnosis and Treatment of Adults with Community-acquired Pneumonia",
+      "organization": "ATS / IDSA · 2019",
+      "url": "https://doi.org/10.1164/rccm.201908-1581ST"
+    },
+    {
+      "id": "icu",
+      "title": "Scoring systems in the critically ill",
+      "organization": "Critical-care review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887099/"
+    },
+    {
+      "id": "ats6mwt",
+      "title": "ATS Statement: Guidelines for the Six-Minute Walk Test",
+      "organization": "American Thoracic Society",
+      "url": "https://www.thoracic.org/statements/resources/pfet/sixminute.pdf"
+    },
+    {
+      "id": "atsField",
+      "title": "ATS Field Walking Tests",
+      "organization": "American Thoracic Society",
+      "url": "https://site.thoracic.org/assemblies/pr/outcome-measures/field-walking-tests"
+    },
+    {
+      "id": "kdigo",
+      "title": "CKD Evaluation and Management Guideline 2024",
+      "organization": "KDIGO",
+      "url": "https://kdigo.org/guidelines/ckd-evaluation-and-management/"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "curb-65",
+      "name": "CURB-65",
+      "category": "Neumología y neumonía",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "respiratory",
+        "emergency",
+        "medicine"
+      ],
+      "purpose": "Apoyar estratificación pronóstica en neumonía adquirida en la comunidad.",
+      "what_it_assesses": "Cinco variables clínicas/laboratoriales resumidas en CURB-65.",
+      "nursing_context": "No es escala de Enfermería; ATS/IDSA prefiere PSI para decidir sitio de atención junto al juicio clínico.",
+      "source_ids": [
+        "cap"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "psi-port",
+      "name": "PSI/PORT",
+      "category": "Neumología y neumonía",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "respiratory",
+        "emergency",
+        "medicine"
+      ],
+      "purpose": "Estimar riesgo de mortalidad a 30 días en neumonía adquirida en comunidad.",
+      "what_it_assesses": "Índice multivariable con datos demográficos, comorbilidad, exploración y laboratorio.",
+      "nursing_context": "No diagnostica neumonía ni sustituye juicio clínico.",
+      "source_ids": [
+        "cap"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "rox",
+      "name": "Índice ROX",
+      "category": "Neumología y soporte respiratorio",
+      "classType": "monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "respiratory",
+        "icu-adult"
+      ],
+      "purpose": "Apoyar evaluación de respuesta a oxígeno nasal de alto flujo.",
+      "what_it_assesses": "Integra SpO₂/FiO₂ y frecuencia respiratoria.",
+      "nursing_context": "Interpretación depende de tiempo/población; no reemplaza evaluación de vía aérea.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "hacor",
+      "name": "Índice HACOR",
+      "category": "Neumología y soporte respiratorio",
+      "classType": "monitorizacion",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "respiratory",
+        "icu-adult"
+      ],
+      "purpose": "Estimar riesgo de fracaso de ventilación no invasiva en contextos estudiados.",
+      "what_it_assesses": "Integra frecuencia cardiaca, acidosis, conciencia, oxigenación y frecuencia respiratoria.",
+      "nursing_context": "No usar fuera de población validada ni sustituir valoración de vía aérea.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "mmrc",
+      "name": "mMRC",
+      "category": "Neumología y disnea",
+      "classType": "valoracion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "respiratory",
+        "rehab"
+      ],
+      "purpose": "Describir limitación de actividad por disnea.",
+      "what_it_assesses": "Escala ordinal del impacto de disnea en actividades cotidianas.",
+      "nursing_context": "Autoinforme; no mide oxigenación ni gravedad aguda.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "borg",
+      "name": "Borg CR10 / 6–20",
+      "category": "Neumología y rehabilitación",
+      "classType": "autoinforme",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "respiratory",
+        "rehab",
+        "cardiology"
+      ],
+      "purpose": "Cuantificar percepción de disnea o esfuerzo durante actividad.",
+      "what_it_assesses": "Existen versiones CR10 y 6–20 que deben mantenerse separadas.",
+      "nursing_context": "No convertir puntuaciones entre versiones; elegir protocolo y población.",
+      "source_ids": [
+        "ats6mwt",
+        "atsField"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "cat-copd",
+      "name": "CAT",
+      "category": "Neumología y EPOC",
+      "classType": "autoinforme",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "respiratory"
+      ],
+      "purpose": "Medir impacto de EPOC sobre estado de salud reportado.",
+      "what_it_assesses": "Cuestionario de ocho aspectos del impacto de EPOC.",
+      "nursing_context": "No sustituye espirometría ni diagnostica EPOC; confirmar versión autorizada.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "act-asthma",
+      "name": "ACT",
+      "category": "Neumología y asma",
+      "classType": "autoinforme",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "respiratory",
+        "pediatrics"
+      ],
+      "purpose": "Valorar control del asma según edad/versión.",
+      "what_it_assesses": "Cuestionario de control; ACT adulto y C-ACT pediátrico son versiones distintas.",
+      "nursing_context": "No mezclar versiones ni diagnosticar asma con el cuestionario.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "nyha",
+      "name": "NYHA Functional Class",
+      "category": "Cardiología",
+      "classType": "clasificacion_funcional",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "medicine",
+        "rehab"
+      ],
+      "purpose": "Clasificar limitación funcional relacionada con síntomas de insuficiencia cardiaca.",
+      "what_it_assesses": "Clases I–IV según actividad y síntomas.",
+      "nursing_context": "Clasificación clínica subjetiva; no mide función ventricular ni monitorización aguda.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "killip",
+      "name": "Killip-Kimball",
+      "category": "Cardiología y síndrome coronario",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "emergency",
+        "icu-adult"
+      ],
+      "purpose": "Clasificar signos de insuficiencia cardiaca en infarto agudo de miocardio.",
+      "what_it_assesses": "Clasificación clínica por signos de insuficiencia cardiaca/shock.",
+      "nursing_context": "No sustituye ECG, biomarcadores ni evaluación urgente.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "timi",
+      "name": "TIMI Risk Score",
+      "category": "Cardiología y síndrome coronario",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "emergency"
+      ],
+      "purpose": "Estimar riesgo de eventos en síndrome coronario según variante.",
+      "what_it_assesses": "Modelos diferenciados STEMI y NSTEMI/angina inestable.",
+      "nursing_context": "No mezclar variantes ni usar como diagnóstico.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "grace",
+      "name": "GRACE Risk Score",
+      "category": "Cardiología y síndrome coronario",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "emergency",
+        "icu-adult"
+      ],
+      "purpose": "Estimar riesgo de mortalidad/eventos en síndrome coronario agudo.",
+      "what_it_assesses": "Modelo multivariable con datos clínicos y laboratorio.",
+      "nursing_context": "No reemplaza evaluación cardiológica ni decisiones terapéuticas.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "heart",
+      "name": "HEART Score",
+      "category": "Cardiología y dolor torácico",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "emergency"
+      ],
+      "purpose": "Estratificar riesgo de eventos cardiovasculares mayores en adultos con dolor torácico.",
+      "what_it_assesses": "Historia, ECG, edad, factores de riesgo y troponina.",
+      "nursing_context": "No es triaje autónomo; requiere protocolo de troponina y evaluación seriada.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "chads2vasc",
+      "name": "CHA₂DS₂-VASc",
+      "category": "Cardiología y fibrilación auricular",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "medicine"
+      ],
+      "purpose": "Estimar riesgo tromboembólico en fibrilación auricular en guías que lo utilizan.",
+      "what_it_assesses": "Factores clínicos ponderados.",
+      "nursing_context": "No diagnostica FA ni prescribe anticoagulación; aplicar guía vigente.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "has-bled",
+      "name": "HAS-BLED",
+      "category": "Cardiología y anticoagulación",
+      "classType": "pronostico",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "cardiology",
+        "medicine"
+      ],
+      "purpose": "Estructurar factores de riesgo de sangrado en fibrilación auricular.",
+      "what_it_assesses": "Modelo de factores clínicos/antecedentes.",
+      "nursing_context": "No contraindica automáticamente anticoagulación; valorar factores modificables.",
+      "source_ids": [
+        "icu"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "kdigo-aki",
+      "name": "KDIGO · lesión renal aguda",
+      "category": "Nefrología",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "nephrology",
+        "icu-adult",
+        "picu",
+        "medicine"
+      ],
+      "purpose": "Clasificar lesión renal aguda por creatinina y/o diuresis.",
+      "what_it_assesses": "Estadificación KDIGO AKI; parámetros y ventanas según guía.",
+      "nursing_context": "No es escala enfermera ni clasificación ERC; no asumir diuresis no medida como cero.",
+      "source_ids": [
+        "kdigo"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "rifle",
+      "name": "RIFLE",
+      "category": "Nefrología",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "nephrology",
+        "icu-adult"
+      ],
+      "purpose": "Clasificar lesión renal aguda en categorías riesgo, lesión, fallo, pérdida y enfermedad terminal.",
+      "what_it_assesses": "Sistema histórico por función renal/diuresis.",
+      "nursing_context": "No mezclar con AKIN/KDIGO; identificar sistema utilizado.",
+      "source_ids": [
+        "kdigo"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "akin",
+      "name": "AKIN",
+      "category": "Nefrología",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "nephrology",
+        "icu-adult"
+      ],
+      "purpose": "Clasificar lesión renal aguda por cambios de creatinina y/o diuresis.",
+      "what_it_assesses": "Sistema AKIN de estadificación.",
+      "nursing_context": "No intercambiar ventanas/criterios con RIFLE/KDIGO.",
+      "source_ids": [
+        "kdigo"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "ckd-epi",
+      "name": "CKD-EPI eGFR",
+      "category": "Nefrología",
+      "classType": "clasificacion_clinica",
+      "populations": [
+        "adultos"
+      ],
+      "services": [
+        "nephrology",
+        "medicine",
+        "cardiology"
+      ],
+      "purpose": "Estimar filtración glomerular para evaluación/clasificación ERC.",
+      "what_it_assesses": "Ecuaciones por creatinina y/o cistatina C.",
+      "nursing_context": "No es escala de Enfermería ni criterio AKI; declarar versión/unidades.",
+      "source_ids": [
+        "kdigo"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "kt-v",
+      "name": "Kt/V",
+      "category": "Hemodiálisis",
+      "classType": "indicador_clinico",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "nephrology"
+      ],
+      "purpose": "Cuantificar adecuación de diálisis a partir de depuración de urea y volumen de distribución.",
+      "what_it_assesses": "Índice de dosis de diálisis con variantes.",
+      "nursing_context": "Método/objetivo dependen de modalidad; no es escala general de riesgo.",
+      "source_ids": [
+        "kdigo"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    },
+    {
+      "id": "urr",
+      "name": "URR",
+      "category": "Hemodiálisis",
+      "classType": "indicador_clinico",
+      "populations": [
+        "adultos",
+        "pediatria"
+      ],
+      "services": [
+        "nephrology"
+      ],
+      "purpose": "Calcular reducción porcentual de urea entre muestras pre y posdiálisis.",
+      "what_it_assesses": "Urea Reduction Ratio.",
+      "nursing_context": "Depende de toma de muestras y modalidad; no equivale directamente a Kt/V.",
+      "source_ids": [
+        "kdigo"
+      ],
+      "visual_prototype": "general",
+      "content_mode": "DOCUMENTAL",
+      "score_or_form": null,
+      "review_status": "PENDIENTE_REVISION_CLINICA",
+      "rights_status": "Resumen educativo original. Verificar manual/versión y permisos antes de digitalizar un formulario.",
+      "local_adoption": "No se afirma adopción nacional universal; confirmar protocolo MINSA/EsSalud y del establecimiento."
+    }
+  ]
+}
