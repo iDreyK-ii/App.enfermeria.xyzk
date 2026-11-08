@@ -41,13 +41,39 @@ internal fun rememberClinicalCatalog(): ClinicalLoad {
     return load.value
 }
 
-internal fun clinicalColor(area: String): Color = when (area) {
-    "Neurología" -> Blue
-    "Dolor" -> Pink
-    "Neonatología" -> Teal
-    "Piel y caídas" -> Gold
-    "Funcionalidad" -> Green
+internal fun clinicalColor(area: String): Color = when {
+    area.contains("neurolog", true) || area.contains("ictus", true) -> Blue
+    area.contains("dolor", true) || area.contains("cardio", true) -> Pink
+    area.contains("neonat", true) || area.contains("obstetric", true) || area.contains("puerper", true) -> Teal
+    area.contains("piel", true) || area.contains("caídas", true) || area.contains("heridas", true) ||
+        area.contains("quemados", true) || area.contains("ostom", true) -> Gold
+    area.contains("funcional", true) || area.contains("rehabil", true) -> Green
     else -> Purple
+}
+
+internal fun clinicalInstrumentTypeLabel(type: String): String = when (type) {
+    "pronostico" -> "Pronóstico"
+    "valoracion_enfermeria" -> "Valoración de Enfermería"
+    "clasificacion_clinica" -> "Clasificación clínica"
+    "clasificacion_imagen" -> "Clasificación por imagen"
+    "clasificacion_funcional" -> "Clasificación funcional"
+    "clasificacion_resultados" -> "Clasificación de resultados"
+    "carga_trabajo" -> "Carga asistencial"
+    "cribado" -> "Cribado"
+    "cribado_alerta" -> "Cribado de alerta"
+    "cribado_nutricional" -> "Cribado nutricional"
+    "cribado_seguridad" -> "Cribado de seguridad"
+    "monitorizacion" -> "Monitorización"
+    "valoracion_clinica" -> "Valoración clínica"
+    "valoracion_funcional" -> "Valoración funcional"
+    "valoracion_psicosocial" -> "Valoración psicosocial"
+    "valoracion_interdisciplinaria" -> "Valoración interdisciplinaria"
+    "herramienta_funcional" -> "Herramienta funcional"
+    "indicador_clinico" -> "Indicador clínico"
+    "indice_resultados" -> "Índice de resultados"
+    "triaje" -> "Sistema de triaje"
+    "autoinforme" -> "Autoinforme"
+    else -> type.replace('_', ' ').replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
 }
 
 @Composable
@@ -63,7 +89,7 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
     val catalog = load.catalog
     var query by rememberSaveable { mutableStateOf("") }
     var population by rememberSaveable { mutableStateOf("") }
-    var area by rememberSaveable { mutableStateOf("") }
+    var instrumentType by rememberSaveable { mutableStateOf("") }
     var service by rememberSaveable { mutableStateOf("") }
     var withPractice by rememberSaveable { mutableStateOf(false) }
     var availabilityIndex by rememberSaveable { mutableIntStateOf(0) }
@@ -94,9 +120,9 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
                     )
                 }
             }
-            val areas = catalog.instruments.map { it.area }.distinct().sorted()
-            ChoiceField("Área de valoración", listOf("Todas las áreas" to 0) + areas.mapIndexed { i, label -> label to i + 1 }, areas.indexOf(area) + 1, showPoints = false) {
-                area = if (it == 0) "" else areas[it - 1]
+            val instrumentTypes = catalog.instruments.map { it.instrumentType }.distinct().sorted()
+            ChoiceField("Clasificación del instrumento", listOf("Todas las clasificaciones" to 0) + instrumentTypes.mapIndexed { i, label -> clinicalInstrumentTypeLabel(label) to i + 1 }, instrumentTypes.indexOf(instrumentType) + 1, showPoints = false) {
+                instrumentType = if (it == 0) "" else instrumentTypes[it - 1]
             }
             val services = catalog.instruments.flatMap { it.services }.distinct().sorted()
             ChoiceField("Servicio hospitalario", listOf("Todos los servicios" to 0) + services.mapIndexed { i, label -> label to i + 1 }, services.indexOf(service) + 1, showPoints = false) {
@@ -115,14 +141,14 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
                 Text("Solo con acceso: práctica, simulación o registro", Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
             }
             val type = ClinicalAvailability.entries.getOrNull(availabilityIndex - 1)
-            val matches = catalog.filter(query, population, area, withPractice, type, service)
+            val matches = catalog.filter(query, population, "", withPractice, type, service, instrumentType)
             val label = if (matches.size == 1) "FICHA" else "FICHAS"
             Badge("${matches.size} $label EN ESTA VISTA", Purple)
             if (matches.isEmpty()) {
                 EmptyState("Sin coincidencias", "Cambia la búsqueda o los filtros. Una escala puede corresponder a otra población o estar pendiente.")
             }
-            if (query.isNotEmpty() || population.isNotEmpty() || area.isNotEmpty() || service.isNotEmpty() || withPractice || availabilityIndex != 0) {
-                Secondary("Limpiar filtros", { query = ""; population = ""; area = ""; service = ""; withPractice = false; availabilityIndex = 0 })
+            if (query.isNotEmpty() || population.isNotEmpty() || instrumentType.isNotEmpty() || service.isNotEmpty() || withPractice || availabilityIndex != 0) {
+                Secondary("Limpiar filtros", { query = ""; population = ""; instrumentType = ""; service = ""; withPractice = false; availabilityIndex = 0 })
             }
             val tablet = LocalConfiguration.current.screenWidthDp >= 600
             matches.chunked(if (tablet) 2 else 1).forEach { rowMatches ->
@@ -134,7 +160,7 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
                             Text(instrument.purpose, style = MaterialTheme.typography.bodyMedium, color = LocalPalette.current.muted)
                             FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                 Badge(instrument.availability.label, Purple)
-                                Badge(instrument.instrumentType, Blue)
+                                Badge(clinicalInstrumentTypeLabel(instrument.instrumentType), Blue)
                                 instrument.populations.forEach { Badge(ClinicalCatalog.POPULATIONS.getValue(it), Teal) }
                             }
                             FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -187,7 +213,7 @@ fun ClinicalInstrumentScreen(id: String, nav: (String) -> Unit, back: () -> Unit
                 }
                 Section("Clasificación y servicios")
                 AppCard(Modifier.fillMaxWidth()) {
-                    Text(instrument.instrumentType, style = MaterialTheme.typography.titleSmall)
+                    Text(clinicalInstrumentTypeLabel(instrument.instrumentType), style = MaterialTheme.typography.titleSmall)
                     FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         instrument.services.forEach { Badge(it, Teal) }
                     }
