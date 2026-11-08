@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0.0",
+  "reviewed_on": "2026-11-08",
+  "title": "Guías maestras · seis prototipos clínicos",
+  "shared_design": {
+    "approved_visual_direction": "Ilustración clínica 3D chibi de alta calidad, enfermera recurrente con uniforme morado y gorro clínico, escenarios hospitalarios cálidos, paneles pastel y bordes suaves. Cada escala conserva composición propia.",
+    "native_ui_rule": "Interfaz, títulos, criterios, controles, filtros, indicadores, resultados y navegación son componentes nativos de Jetpack Compose. Las ilustraciones solo acompañan; no contienen textos, estímulos estandarizados ni puntuaciones.",
+    "responsive": "Teléfono vertical: una columna, imagen hero arriba, componentes apilados. Tablet/horizontal: escena lateral o superior y contenido en dos columnas. Mantener modo oscuro, tipografía del sistema, TalkBack y movimiento reducido.",
+    "transversal_use": "Una ficha por instrumento con asociación a múltiples servicios; no duplicar la misma escala por cada servicio.",
+    "clinical_notice": "Versión educativa. Antes de uso asistencial se requiere cotejo de la versión, permisos, revisión profesional independiente y concordancia con el protocolo del establecimiento."
+  },
+  "instruments": [
+    {
+      "id": "glasgow",
+      "name": "Escala de Coma de Glasgow",
+      "abbreviation": "GCS",
+      "visual_prototype": "neurologico",
+      "hero_scene": "Habitación de hospitalización/área crítica. Enfermera al lado de la cama valorando respuesta neurológica, paciente adulto, monitor discreto con trazado clínico. Iconografía de ojo, conversación y movimiento aparece en paneles nativos, nunca como estímulo de evaluación.",
+      "purpose": "Describir el nivel de conciencia mediante tres respuestas observables: ocular, verbal y motora.",
+      "population": "Adultos en versión estándar; mantener separadas las adaptaciones pediátricas y por edad/desarrollo.",
+      "services": [
+        "Emergencia",
+        "UCI adulto",
+        "Medicina",
+        "Cirugía",
+        "Neurología",
+        "Neurocirugía"
+      ],
+      "components": [
+        {
+          "id": "ocular",
+          "name": "Respuesta ocular",
+          "description": "Registrar la mejor respuesta ocular observada según la versión estándar."
+        },
+        {
+          "id": "verbal",
+          "name": "Respuesta verbal",
+          "description": "Registrar la mejor respuesta verbal; identificar interferencias como intubación, afasia, idioma o barreras de comunicación."
+        },
+        {
+          "id": "motora",
+          "name": "Respuesta motora",
+          "description": "Registrar la mejor respuesta motora, diferenciando respuesta espontánea, a órdenes y a estímulos según manual."
+        }
+      ],
+      "use_in_nursing": "Valorar y registrar cada componente por separado, anotar hora y factores que pueden interferir, observar tendencias y comunicar cambios relevantes. Informar O, V y M, además del total solo cuando sea válido.",
+      "recording": "Un componente no valorable (NT/NV según el sistema de registro) no equivale a ausencia de respuesta ni a la puntuación mínima. No generar total si alguno de los componentes no es valorable. No rellenar ausencias con cero o uno.",
+      "interpretation": "El total estándar se encuentra entre 3 y 15 cuando los tres componentes se pueden valorar. El total no sustituye la descripción de O/V/M, el examen neurológico ni el juicio clínico.",
+      "limitations": [
+        "Sedación, parálisis, intubación, lesión ocular, afasia, idioma, déficits previos y barreras sensoriales pueden alterar componentes.",
+        "No utilizar el total aislado para diagnosticar, pronosticar o decidir tratamiento.",
+        "No aplicar automáticamente los descriptores adultos a niños."
+      ],
+      "app_mode": "EDUCATIONAL_PRACTICE",
+      "current_route": "glasgow",
+      "references": [
+        {
+          "title": "Glasgow Coma Scale FAQ",
+          "organization": "University of Glasgow",
+          "url": "https://www.glasgowcomascale.org/faq/"
+        },
+        {
+          "title": "Glasgow Coma Scale permissions",
+          "organization": "University of Glasgow",
+          "url": "https://www.glasgowcomascale.org/permissions/"
+        }
+      ],
+      "review_status": "PENDIENTE_REVISION_CLINICA"
+    },
+    {
+      "id": "eva",
+      "name": "Escala Visual Analógica del dolor",
+      "abbreviation": "EVA / VAS",
+      "visual_prototype": "dolor",
+      "hero_scene": "Entrevista empática en una habitación de hospitalización. Enfermera a la altura del paciente, paciente señalando una línea visual nativa de la app. No usar caras de Wong-Baker/FPS-R ni escalas oficiales dentro de la ilustración.",
+      "purpose": "Obtener la intensidad del dolor mediante autoinforme del paciente en una línea visual continua.",
+      "population": "Personas que comprenden la instrucción y pueden señalar/comunicar su experiencia; seleccionar otra herramienta si no pueden autoinformar.",
+      "services": [
+        "Emergencia",
+        "Medicina",
+        "Cirugía",
+        "UCI cuando puede comunicarse",
+        "URPA",
+        "Oncología",
+        "Rehabilitación"
+      ],
+      "components": [
+        {
+          "id": "self_report",
+          "name": "Autoinforme",
+          "description": "Explicar el formato de respuesta con lenguaje simple y neutral."
+        },
+        {
+          "id": "line",
+          "name": "Línea visual",
+          "description": "La VAS clásica utiliza una línea continua con extremos definidos; el paciente indica el punto que representa su experiencia."
+        },
+        {
+          "id": "record",
+          "name": "Registro contextual",
+          "description": "Documentar localización, momento, contexto, reposo/actividad y respuesta a intervenciones."
+        }
+      ],
+      "use_in_nursing": "Preguntar de forma neutral, asegurar que el paciente comprende los extremos y registrar el valor y contexto. Reevaluar tras intervenciones según protocolo institucional.",
+      "recording": "La versión digital de la app se identificará como simulación no calibrada en milímetros mientras no se valide la equivalencia del dispositivo/escala. EVA no es igual a NRS; la escala numérica 0–10 se mantiene como instrumento separado.",
+      "interpretation": "Registrar el valor del autoinforme sin convertir automáticamente a categoría o recomendar tratamiento. Los puntos de corte para leve/moderado/intenso dependen de la convención clínica y del protocolo.",
+      "limitations": [
+        "No sustituye la entrevista clínica sobre localización, cualidad, duración y repercusión del dolor.",
+        "Si el paciente no puede autoinformar, seleccionar una herramienta observacional validada para su población/contexto.",
+        "No incorporar caritas o dibujos que puedan confundirse con FPS-R o Wong-Baker, que tienen estímulos y condiciones de uso propios."
+      ],
+      "app_mode": "EDUCATIONAL_SIMULATION",
+      "current_route": "eva",
+      "references": [
+        {
+          "title": "Evaluations and measurements: pain intensity",
+          "organization": "International Association for the Study of Pain",
+          "url": "https://www.iasp-pain.org/wp-content/uploads/2021/11/IASP-MPC_toolkit_chapt4.pdf"
+        }
+      ],
+      "review_status": "PENDIENTE_VALIDACION_DIGITAL"
+    },
+    {
+      "id": "rass",
+      "name": "Richmond Agitation-Sedation Scale",
+      "abbreviation": "RASS",
+      "visual_prototype": "uci",
+      "hero_scene": "Unidad de cuidados intensivos adulta. Enfermera con hoja de registro junto a paciente en cama monitorizada. Panel de diez niveles en Compose, con una escala vertical ordenada desde agitación positiva hasta sedación negativa.",
+      "purpose": "Describir el nivel de agitación o sedación en pacientes adultos, especialmente en cuidados críticos.",
+      "population": "Adultos en contexto de UCI/sedación. No utilizar automáticamente RASS adulta en pediatría o neonatología.",
+      "services": [
+        "UCI adulto",
+        "Emergencia",
+        "URPA y áreas de sedación según protocolo"
+      ],
+      "components": [
+        {
+          "id": "positive",
+          "name": "Niveles positivos",
+          "description": "Describen grados crecientes de inquietud/agitación; +4 es el extremo de conducta combativa."
+        },
+        {
+          "id": "zero",
+          "name": "Nivel cero",
+          "description": "Estado alerta y tranquilo."
+        },
+        {
+          "id": "negative",
+          "name": "Niveles negativos",
+          "description": "Describen grados crecientes de sedación hasta ausencia de respuesta."
+        }
+      ],
+      "level_summary": [
+        {
+          "value": "+4",
+          "label": "Combativo"
+        },
+        {
+          "value": "+3",
+          "label": "Muy agitado"
+        },
+        {
+          "value": "+2",
+          "label": "Agitado"
+        },
+        {
+          "value": "+1",
+          "label": "Inquieto"
+        },
+        {
+          "value": "0",
+          "label": "Alerta y tranquilo"
+        },
+        {
+          "value": "−1",
+          "label": "Somnoliento"
+        },
+        {
+          "value": "−2",
+          "label": "Sedación ligera"
+        },
+        {
+          "value": "−3",
+          "label": "Sedación moderada"
+        },
+        {
+          "value": "−4",
+          "label": "Sedación profunda"
+        },
+        {
+          "value": "−5",
+          "label": "No responde"
+        }
+      ],
+      "use_in_nursing": "Observar conducta y respuesta según la versión oficial y protocolo de la unidad; registrar el valor y hora, relacionarlo con el objetivo individual prescrito y comunicar cambios. No proponer objetivos de sedación por cuenta propia.",
+      "recording": "La app de referencia conserva registro externo adulto: transcribir un puntaje obtenido mediante instrumento autorizado, identificar versión, fuente y contexto. No administrar estímulos ni reproducir el formulario completo hasta resolver permisos y revisión profesional.",
+      "interpretation": "Valores positivos representan mayor agitación; valores negativos representan mayor sedación; cero representa alerta y calma. La interpretación debe considerar contexto, fármacos, ventilación y situación clínica.",
+      "limitations": [
+        "La puntuación no indica por sí sola qué fármaco administrar ni qué dosis usar.",
+        "No intercambiar con Ramsay, SAS, escalas pediátricas ni herramientas de delirium.",
+        "La ausencia de respuesta puede requerir evaluación contextual; no se debe inferir automáticamente sedación farmacológica."
+      ],
+      "app_mode": "EXTERNAL_RECORD",
+      "current_route": "registro-escala/rass",
+      "references": [
+        {
+          "title": "Escala de agitación-sedación de Richmond",
+          "organization": "Manual MSD",
+          "url": "https://www.msdmanuals.com/es/professional/multimedia/table/escala-de-agitaci%C3%B3n-sedaci%C3%B3n-de-richmond"
+        },
+        {
+          "title": "ICU Liberation resources",
+          "organization": "Society of Critical Care Medicine",
+          "url": "https://sccm.org/clinical-resources/iculiberation-home"
+        }
+      ],
+      "review_status": "PENDIENTE_DERECHOS_Y_REVISION_CLINICA"
+    },
+    {
+      "id": "apgar",
+      "name": "Test de Apgar",
+      "abbreviation": "APGAR",
+      "visual_prototype": "neonatal-apgar",
+      "hero_scene": "Área de atención inmediata del recién nacido. Enfermera en estación térmica neonatal valorando al recién nacido con equipo clínico preparado. Cinco tarjetas de componentes dibujadas nativamente.",
+      "purpose": "Describir el estado del recién nacido en momentos específicos después del nacimiento.",
+      "population": "Recién nacidos; no usar para adultos ni como sustituto de la evaluación continua.",
+      "services": [
+        "Sala de partos",
+        "Neonatología",
+        "Alojamiento conjunto",
+        "Atención inmediata neonatal"
+      ],
+      "components": [
+        {
+          "id": "appearance",
+          "name": "Apariencia / color",
+          "description": "Valora la coloración según el criterio de la versión y condiciones clínicas."
+        },
+        {
+          "id": "pulse",
+          "name": "Pulso / frecuencia cardiaca",
+          "description": "Valora presencia y frecuencia cardiaca."
+        },
+        {
+          "id": "grimace",
+          "name": "Gesticulación / respuesta refleja",
+          "description": "Valora respuesta a estímulos reflejos según el instrumento."
+        },
+        {
+          "id": "activity",
+          "name": "Actividad / tono muscular",
+          "description": "Valora tono y actividad motora."
+        },
+        {
+          "id": "respiration",
+          "name": "Respiración",
+          "description": "Valora esfuerzo respiratorio y llanto."
+        }
+      ],
+      "scoring_summary": "Cada uno de los cinco componentes se valora de 0 a 2; el total máximo es 10. La ficha de práctica debe registrar el minuto de evaluación, no solo el total.",
+      "timing": "La NTS 214-MINSA/DGIESP-2024 contempla Apgar al primer y quinto minuto. Otras reevaluaciones se realizan según condición y protocolo neonatal; el puntaje no debe retrasar asistencia o reanimación.",
+      "use_in_nursing": "Realizar/registrar conforme a competencias y protocolo del área; dejar constancia del minuto, hallazgos y cuidados/intervenciones que ocurren simultáneamente.",
+      "interpretation": "Describe la condición del recién nacido en ese momento. No diagnostica asfixia por sí solo ni predice individualmente el desarrollo neurológico.",
+      "limitations": [
+        "No retrasar la atención inicial/reanimación para completar el test.",
+        "La coloración puede ser difícil de valorar y no sustituye monitorización ni otras mediciones.",
+        "El puntaje se contextualiza con edad gestacional, transición y evolución."
+      ],
+      "app_mode": "EDUCATIONAL_PRACTICE",
+      "current_route": "escala/apgar",
+      "references": [
+        {
+          "title": "NTS 214-MINSA/DGIESP-2024",
+          "organization": "MINSA Perú",
+          "url": "https://www.gob.pe/institucion/minsa/normas-legales/5874349-545-2024-minsa"
+        },
+        {
+          "title": "The Apgar Score",
+          "organization": "AAP / ACOG",
+          "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2015/10/the-apgar-score"
+        }
+      ],
+      "review_status": "PENDIENTE_REVISION_NEONATAL"
+    },
+    {
+      "id": "capurro",
+      "name": "Método de Capurro",
+      "abbreviation": "CAPURRO A / B",
+      "visual_prototype": "neonatal-capurro",
+      "hero_scene": "Neonatología. Enfermera realiza valoración física respetuosa del recién nacido; acercamientos ilustrativos discretos de oreja, piel, pezón/areola y planta del pie, con paneles Compose. No representar genitales como criterio de Capurro B.",
+      "purpose": "Estimar edad gestacional mediante características somáticas y, según la variante, componentes neurológicos.",
+      "population": "Recién nacidos seleccionados conforme al protocolo y a la variante aplicable.",
+      "variants": [
+        {
+          "id": "capurro-b",
+          "name": "Capurro B · somático",
+          "local_reference": "NTS 214-MINSA/DGIESP-2024, anexo 4",
+          "components": [
+            "Forma del pabellón auricular",
+            "Glándula mamaria",
+            "Formación del pezón/areola",
+            "Textura de la piel",
+            "Pliegues plantares"
+          ],
+          "formula": "Días estimados = 204 + suma de puntos de los cinco signos; convertir los días en semanas y días.",
+          "correction": "204 es la constante de la fórmula; NO es el puntaje máximo. La variante B documentada no utiliza genitales como componente."
+        },
+        {
+          "id": "capurro-a",
+          "name": "Capurro A · somático/neurológico",
+          "local_reference": "Variante descrita en fuentes secundarias; la fuente/versión institucional debe confirmarse antes de aplicar.",
+          "components": [
+            "Cuatro signos somáticos definidos por la versión (sin formación del pezón)",
+            "Signo de la bufanda",
+            "Caída de la cabeza"
+          ],
+          "formula": "La versión registrada en el módulo de origen utiliza constante 200; mantenerla separada de Capurro B.",
+          "correction": "No trasladar la composición, fórmula ni puntos de la variante A a la B. El módulo conserva A como transcripción externa hasta cotejar un manual autorizado."
+        }
+      ],
+      "use_in_nursing": "Registrar variante, edad del recién nacido, hallazgos, puntuación externa cuando corresponda y fuente. La estimación debe interpretarse por personal competente junto con antecedentes obstétricos y valoración neonatal.",
+      "interpretation": "Es una estimación de edad gestacional, no datación exacta ni sustituto automático de la mejor estimación obstétrica disponible.",
+      "limitations": [
+        "No mezclar las variantes A y B ni sus constantes.",
+        "No presentar 204 como máximo de puntuación.",
+        "La ilustración es educativa: no sirve como estímulo ni sustituye técnica clínica/entrenamiento.",
+        "No calcular si no se ha identificado la versión y todos los componentes de esa versión."
+      ],
+      "app_mode": "EDUCATIONAL_PRACTICE",
+      "current_route": "capurro",
+      "references": [
+        {
+          "title": "NTS 214-MINSA/DGIESP-2024",
+          "organization": "MINSA Perú",
+          "url": "https://www.gob.pe/institucion/minsa/normas-legales/5874349-545-2024-minsa"
+        },
+        {
+          "title": "NTS 214 · texto y anexos",
+          "organization": "MINSA Perú",
+          "url": "https://bvs.minsa.gob.pe/local/MINSA/7546.pdf"
+        }
+      ],
+      "review_status": "PENDIENTE_REVISION_NEONATAL"
+    },
+    {
+      "id": "norton",
+      "name": "Escala de Norton",
+      "abbreviation": "NORTON",
+      "visual_prototype": "piel-adulto",
+      "hero_scene": "Habitación de hospitalización/geriatría. Enfermera conversa con una persona adulta mayor junto a la cama; se ilustra cuidado preventivo de piel, movilidad y confort, sin heridas gráficas ni descriptores de respuesta en la imagen.",
+      "purpose": "Valorar riesgo de desarrollar lesiones por presión mediante dominios físicos, mentales y funcionales.",
+      "population": "Adultos hospitalizados; confirmar versión original o modificada y adecuación al entorno.",
+      "components": [
+        {
+          "id": "physical",
+          "name": "Estado físico",
+          "description": "Condición física general según versión."
+        },
+        {
+          "id": "mental",
+          "name": "Estado mental",
+          "description": "Estado mental/alerta descrito por el instrumento."
+        },
+        {
+          "id": "activity",
+          "name": "Actividad",
+          "description": "Nivel de actividad cotidiana."
+        },
+        {
+          "id": "mobility",
+          "name": "Movilidad",
+          "description": "Capacidad para cambiar y controlar posición."
+        },
+        {
+          "id": "continence",
+          "name": "Incontinencia",
+          "description": "Control de continencia según definición del instrumento."
+        }
+      ],
+      "scoring_summary": "La escala original se describe con cinco dominios y un rango total de 5 a 20. Una puntuación menor indica mayor riesgo; los puntos de corte y la versión deben comprobarse en el protocolo institucional.",
+      "use_in_nursing": "Valorar integralmente junto con inspección de piel, movilidad, estado nutricional, humedad, perfusión y situación clínica. Documentar cambios y medidas preventivas individualizadas.",
+      "recording": "El módulo conserva Norton como registro externo de puntuación adulta, no como formulario administrable, hasta verificar versión, permiso de reproducción y revisión profesional independiente.",
+      "interpretation": "Es una herramienta de apoyo a la valoración del riesgo, no una garantía de que aparezca o no una lesión por presión. El juicio clínico y la reevaluación son necesarios.",
+      "limitations": [
+        "No confundir dominios de Norton con Braden/Waterlow.",
+        "Los puntos de corte varían entre versiones y protocolos.",
+        "Un puntaje aislado no reemplaza inspección cutánea ni plan preventivo."
+      ],
+      "app_mode": "EXTERNAL_RECORD",
+      "current_route": "registro-escala/norton",
+      "references": [
+        {
+          "title": "Norton Pressure Ulcer Risk Scale · Clinician Summary",
+          "organization": "SCIRE Professional",
+          "url": "https://scireproject.com/wp-content/uploads/2025/01/Clinician-Summary_Norton-Scale-v.8.1.pdf"
+        },
+        {
+          "title": "Pressure ulcer prevention tools",
+          "organization": "AHRQ",
+          "url": "https://www.ahrq.gov/patient-safety/settings/hospital/resource/pressureulcer/tool/pu7b.html"
+        }
+      ],
+      "review_status": "PENDIENTE_DERECHOS_Y_REVISION_CLINICA"
+    }
+  ]
+}
