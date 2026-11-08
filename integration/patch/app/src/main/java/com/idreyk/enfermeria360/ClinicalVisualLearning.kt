@@ -96,7 +96,6 @@ object ClinicalVisualLearning {
             listOf("nutri", "malnutri", "deshidrat").any { name.contains(it, true) } -> "Nutrición"
             listOf("funcion", "rehab", "frail", "fragilidad", "movilidad", "discapacidad").any { name.contains(it, true) } -> "Funcionalidad"
             listOf("salud mental", "psiquiatr", "sedación", "delirium", "ansiedad", "depres").any { name.contains(it, true) } -> "Cognición y salud mental"
-            listOf("uci", "emerg", "triaje", "sepsis", "trauma", "alerta", "choque", "pronóstico", "surgery", "quirúrg", "cardio", "nefro", "respiratorio", "infección").any { name.contains(it, true) } -> "Piel y caídas"
             else -> null
         }
         return key?.let { areas[it] } ?: general
