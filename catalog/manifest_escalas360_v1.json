@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "reviewed_on": "2026-11-08",
+  "title": "Manifest de catálogo Escalas 360",
+  "source_catalog": {
+    "path": "source/catalogo_fuente_Enfermer-a-app_2026-11-02.json",
+    "instrument_count": 45,
+    "source_count": 43,
+    "source_repository": "https://github.com/iDreyK-ii/Enfermer-a-app",
+    "source_branch": "desarrollo"
+  },
+  "expansions": [
+    {
+      "path": "expansiones/01_uci_emergencia_carga_alertas.json",
+      "instrument_count": 17
+    },
+    {
+      "path": "expansiones/02_caidas_piel_perioperatorio_vte.json",
+      "instrument_count": 13
+    },
+    {
+      "path": "expansiones/03_respiratorio_cardiologia_nefrologia.json",
+      "instrument_count": 21
+    },
+    {
+      "path": "expansiones/04_obstetricia_neonatologia_geriatria_rehab.json",
+      "instrument_count": 24
+    },
+    {
+      "path": "expansiones/05_salud_mental_oncologia_heridas_rehab.json",
+      "instrument_count": 33
+    }
+  ],
+  "count_before_cross_file_deduplication": 153,
+  "note": "El loader combina por ID estable y elimina duplicados si los hubiera. El conteo final debe calcularse desde el catálogo unido y validarse con CI.",
+  "guide": "../content/guias_seis_prototipos_clinicos_v1.json",
+  "workload_comparison": "../content/uci_comparacion_tiss_nas_nems_v1.json",
+  "native_module_entry": "android/src/main/java/com/idreyk/enfermeria360/scales360/Escalas360CompleteCatalogScreen",
+  "art_assets_expected": [
+    "android/src/main/assets/scales360_art/scale_glasgow.webp",
+    "android/src/main/assets/scales360_art/scale_eva.webp",
+    "android/src/main/assets/scales360_art/scale_rass.webp",
+    "android/src/main/assets/scales360_art/scale_apgar.webp",
+    "android/src/main/assets/scales360_art/scale_capurro.webp",
+    "android/src/main/assets/scales360_art/scale_norton.webp"
+  ]
+}
