@@ -75,6 +75,8 @@ class ClinicalCatalogTests {
         assertEquals(1, data.filter(service = "UCI adulto", query = "TISS-28").size)
         assertEquals(0, data.filter(service = "Neonatología", query = "TISS-28").size)
         assertTrue(data.instruments.all { it.services.isNotEmpty() && it.nursingRole.isNotBlank() })
+        assertTrue(data.filter(instrumentType = "Pronóstico").any { it.id == "sofa" })
+        assertTrue(data.filter(instrumentType = "Carga asistencial").any { it.id == "tiss-28" })
     }
 
     @Test fun futureFormatIsNotSilentlyAccepted() = rejected { it.put("formato", 2) }
