@@ -22,5 +22,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.9"
-      - name: Assemble Android application
-        run: gradle :app:assembleDebug
+      - name: Validate the offline clinical catalogue
+        run: python3 tools/validate_scale_catalog.py app/src/main/assets/escalas_clinicas_v1.json
+      - name: Run unit tests, assemble Android app and lint
+        run: gradle :app:testDebugUnitTest :app:assembleDebug :app:lintDebug

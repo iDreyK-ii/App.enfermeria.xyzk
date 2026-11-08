@@ -1,23 +1,44 @@
-# Enfermería iDreyK 360 — Escalas 360
+# Enfermería iDreyK 360
 
-Repositorio de trabajo del módulo nativo de escalas y tests clínicos para Android.
+Proyecto Android nativo de desarrollo para aprendizaje y apoyo educativo de Enfermería.
 
-## Repositorios
-- Origen de investigación y arquitectura: https://github.com/iDreyK-ii/Enfermer-a-app (rama `desarrollo`).
-- Destino del módulo: https://github.com/iDreyK-ii/App.enfermeria.xyzk (rama `main`).
-- Namespace previsto: `com.idreyk.enfermeria360`.
+## Estado de desarrollo
 
-## Principios
-- Interfaz nativa Kotlin + Jetpack Compose; las ilustraciones no sustituyen la interfaz.
-- Mantener seis lenguajes visuales aprobados: Glasgow, EVA, RASS, Apgar, Capurro y Norton.
-- Diferenciar contenido documental, práctica educativa, transcripción de puntuación externa y calculadora autorizada.
-- No inventar criterios, puntuaciones, puntos de corte ni interpretaciones.
-- Registrar fuente, versión, población, restricciones y estado de validación por instrumento.
-- Respetar licencias y derechos de reproducción.
-- Adaptación a teléfonos y tablets, vertical y horizontal, con accesibilidad y modo oscuro.
+- **Rama activa:** [`integracion/escalas360-native`](https://github.com/iDreyK-ii/App.enfermeria.xyzk/tree/integracion/escalas360-native).
+- **Plan de trabajo:** [Plan de desarrollo por fases hasta el 100 %](docs/PLAN_DESARROLLO_100.md).
+- **Rama principal:** `main`; se mantiene estable mientras la integración se revisa y supera las comprobaciones.
+- **Stack:** Kotlin, Jetpack Compose, Gradle y recursos offline.
+- **Namespace:** `com.idreyk.enfermeria360`.
+
+> Los cambios ya están subidos a la rama de trabajo. La rama `main` no refleja aún todo el desarrollo: los cambios se revisarán mediante Pull Request cuando el conjunto sea compilable y verificable.
+
+## Diseño y experiencia
+
+Se conserva el lenguaje visual aprobado para iDreyK 360: paleta turquesa, rosa y violeta/azul, superficies redondeadas, jerarquía clara, tipografías Outfit y Nunito Sans, ilustraciones clínicas locales y controles nativos de Compose. La interfaz debe adaptarse a teléfonos y tablets, orientación vertical/horizontal, modo oscuro, texto ampliado, TalkBack y movimiento reducido.
+
+## Principios de contenido
+
+- Las ilustraciones acompañan; no sustituyen controles, datos, formularios ni escalas estandarizadas.
+- Separar fichas documentales, práctica educativa, simulación, registro externo y calculadoras expresamente autorizadas.
+- No inventar puntuaciones, puntos de corte, dosis, resultados, protocolos ni indicaciones.
+- Cada contenido clínico debe conservar fuentes, versión, población, límites, derechos y estado de revisión.
+- El desarrollo educativo no constituye validación clínica ni sustituye protocolos institucionales.
 
 ## Alcance
-El catálogo se construirá a partir de las fichas, referencias y decisiones ya presentes en el repositorio de origen. Se ampliará con herramientas relevantes (incluidos TISS-28, TISS-76, NAS y NEMS) después de verificar evidencia, versiones y permisos.
 
-## Seguridad clínica
-Contenido educativo. La inclusión en el módulo no implica validación para uso asistencial ni sustituye protocolos institucionales o juicio profesional.
+La construcción por fases incluye navegación y panel principal, valoración y PAE, biblioteca clínica, herramientas de cálculo, monitorización/ECG, atlas, aprendizaje, protocolos, casos, almacenamiento, importación/exportación, accesibilidad y control de calidad.
+
+**Fichas farmacológicas completas:** quedan fuera de las fases actuales y se desarrollarán en una etapa posterior, como se acordó. Se conserva la estructura que ya existe sin declarar terminada esa sección.
+
+## Verificación local
+
+Desde la raíz del proyecto:
+
+```bash
+python3 tools/validate_scale_catalog.py app/src/main/assets/escalas_clinicas_v1.json
+gradle :app:testDebugUnitTest
+gradle :app:assembleDebug
+gradle :app:lintDebug
+```
+
+GitHub Actions ejecuta estas comprobaciones en cada actualización de la rama de trabajo.
