@@ -120,7 +120,7 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
                     )
                 }
             }
-            val instrumentTypes = catalog.instruments.map { it.instrumentType }.distinct().sorted()
+            val instrumentTypes = catalog.instruments.map { clinicalInstrumentTypeGroup(it.instrumentType) }.distinct().sorted()
             ChoiceField("Clasificación del instrumento", listOf("Todas las clasificaciones" to 0) + instrumentTypes.mapIndexed { i, label -> clinicalInstrumentTypeLabel(label) to i + 1 }, instrumentTypes.indexOf(instrumentType) + 1, showPoints = false) {
                 instrumentType = if (it == 0) "" else instrumentTypes[it - 1]
             }
