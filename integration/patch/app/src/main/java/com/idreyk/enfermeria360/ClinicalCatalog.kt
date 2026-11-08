@@ -52,12 +52,14 @@ data class ClinicalCatalog(
         withPracticeOnly: Boolean = false,
         availability: ClinicalAvailability? = null,
         service: String = "",
+        instrumentType: String = "",
     ): List<ClinicalInstrument> {
         val needle = normalized(query.trim())
         return instruments.filter {
             (population.isEmpty() || population in it.populations) &&
                 (area.isEmpty() || area == it.area) &&
                 (service.isEmpty() || service in it.services) &&
+                (instrumentType.isEmpty() || instrumentType == it.instrumentType) &&
                 (availability == null || availability == it.availability) &&
                 (!withPracticeOnly || it.hasPractice) &&
                 normalized("${it.name} ${it.area} ${it.instrumentType} ${it.services.joinToString(" ")} ${it.purpose} ${it.version}").contains(needle)
