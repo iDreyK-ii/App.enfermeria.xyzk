@@ -155,6 +155,8 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     rowMatches.forEach { instrument ->
                         AppCard(Modifier.weight(1f).testTag("ficha-${instrument.id}"), onClick = { nav("instrumento/${instrument.id}") }) {
+                            val art = ClinicalVisualLearning.area(instrument.area)
+                            ClinicalAreaIllustration(art, Modifier.fillMaxWidth().height(132.dp))
                             Badge(instrument.area.uppercase(), clinicalColor(instrument.area))
                             Text(instrument.name, style = MaterialTheme.typography.titleMedium)
                             Text(instrument.purpose, style = MaterialTheme.typography.bodyMedium, color = LocalPalette.current.muted)
