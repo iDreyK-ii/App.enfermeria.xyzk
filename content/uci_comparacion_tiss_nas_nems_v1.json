@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "date_reviewed": "2026-11-08",
+  "title": "UCI · carga de trabajo y actividad terapéutica",
+  "scope": "Guía educativa para distinguir sistemas de carga asistencial y uso de recursos. No contiene formularios completos, pesos ni puntos de corte.",
+  "instruments": [
+    {
+      "id": "tiss-76",
+      "name": "TISS-76",
+      "items": 76,
+      "measures": "Intervenciones terapéuticas de una versión extensa del Therapeutic Intervention Scoring System.",
+      "nursing_meaning": "Describe intensidad de intervenciones y consumo de recursos en UCI; requiere registrar lo que se realizó durante el periodo y seguir el manual de esa edición.",
+      "does_not_measure": "No es una medida directa de todas las actividades ni de minutos de Enfermería; no es score aislado de pronóstico.",
+      "app_status": "Ficha documental; versión histórica; no administrar ni calcular hasta revisión de manual, derechos y uso local.",
+      "reference_ids": [
+        "icu"
+      ]
+    },
+    {
+      "id": "tiss-28",
+      "name": "TISS-28",
+      "items": 28,
+      "measures": "Intervenciones terapéuticas seleccionadas y complejidad de recursos del paciente crítico.",
+      "nursing_meaning": "Permite describir la actividad terapéutica/intensidad de recursos de una unidad. No representa toda la carga de trabajo enfermero.",
+      "does_not_measure": "No sustituye NAS, NEMS ni un modelo de gravedad como APACHE/SOFA; no equivale a tiempo exacto de cuidados.",
+      "app_status": "Ficha documental; no reproducir los 28 ítems ni pesos antes de confirmar permisos y edición.",
+      "reference_ids": [
+        "tiss28",
+        "icu"
+      ]
+    },
+    {
+      "id": "nas",
+      "name": "Nursing Activities Score",
+      "items": 23,
+      "measures": "Proporción del tiempo de Enfermería ocupado por actividades directas e indirectas del cuidado en el periodo de 24 horas.",
+      "nursing_meaning": "Es el más directamente relacionado con las actividades/tiempo de Enfermería de los tres sistemas comparados; debe aplicarse con ventana, definiciones y manual de la versión.",
+      "does_not_measure": "No es score de gravedad fisiológica ni un diagnóstico; no se debe intercambiar con TISS-28 o NEMS.",
+      "app_status": "Ficha documental prioritaria; conservar definición, versión y periodo. No programar ponderaciones hasta cotejar manual/licencia.",
+      "reference_ids": [
+        "nas",
+        "icu"
+      ]
+    },
+    {
+      "id": "nems",
+      "name": "Nine Equivalents of Nursing Manpower Use Score",
+      "items": 9,
+      "measures": "Actividad terapéutica y uso de recursos mediante un instrumento abreviado.",
+      "nursing_meaning": "Permite una visión más sencilla de actividad/recursos del paciente crítico, con menos granularidad que el NAS.",
+      "does_not_measure": "No registra todo el tiempo de Enfermería como NAS ni reproduce el nivel de detalle de TISS-28.",
+      "app_status": "Ficha documental; no intercambiar puntos ni ítems con TISS-28/NAS.",
+      "reference_ids": [
+        "nems",
+        "icu"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Pregunta principal",
+      "tiss": "¿Qué intervenciones terapéuticas se realizaron?",
+      "nas": "¿Cuánto trabajo/tiempo de Enfermería demandaron las actividades?",
+      "nems": "¿Qué nivel de actividad terapéutica/recursos se utilizó mediante un índice abreviado?"
+    },
+    {
+      "dimension": "Granularidad",
+      "tiss": "Alta en TISS-76; reducida en TISS-28",
+      "nas": "Amplia, incluye varias actividades de Enfermería",
+      "nems": "Abreviada, nueve equivalentes"
+    },
+    {
+      "dimension": "Uso orientativo",
+      "tiss": "Actividad terapéutica/recursos de UCI",
+      "nas": "Carga de trabajo enfermero",
+      "nems": "Monitorización simplificada de recursos"
+    },
+    {
+      "dimension": "No confundir con",
+      "tiss": "APACHE, SOFA o NAS",
+      "nas": "TISS-28 y NEMS",
+      "nems": "Medida directa de minutos o NAS"
+    }
+  ],
+  "clinical_safeguards": [
+    "No sumar instrumentos diferentes entre sí ni convertir puntos de uno a otro.",
+    "No utilizar un score de carga asistencial como medida de gravedad clínica.",
+    "No usar una puntuación para justificar una dotación o decisión laboral sin el método institucional aprobado.",
+    "Documentar versión, periodo de observación, unidad, población y fuente.",
+    "La ficha de la app debe mostrar el estado de revisión y no permitir cálculo asistencial hasta que exista una adaptación aprobada."
+  ],
+  "references": [
+    {
+      "id": "tiss28",
+      "title": "TISS-28 original",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8565541/"
+    },
+    {
+      "id": "nas",
+      "title": "NAS original",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12576939/"
+    },
+    {
+      "id": "nems",
+      "title": "NEMS original",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9290990/"
+    },
+    {
+      "id": "icu",
+      "title": "Review of scoring systems in critical illness",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887099/"
+    }
+  ]
+}
