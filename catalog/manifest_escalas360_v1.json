@@ -29,9 +29,13 @@
     {
       "path": "expansiones/05_salud_mental_oncologia_heridas_rehab.json",
       "instrument_count": 33
+    },
+    {
+      "path": "expansiones/06_sepsis_trauma_ictus_pediatria_cirugia.json",
+      "instrument_count": 38
     }
   ],
-  "count_before_cross_file_deduplication": 153,
+  "count_before_cross_file_deduplication": 191,
   "note": "El loader combina por ID estable y elimina duplicados si los hubiera. El conteo final debe calcularse desde el catálogo unido y validarse con CI.",
   "guide": "../content/guias_seis_prototipos_clinicos_v1.json",
   "workload_comparison": "../content/uci_comparacion_tiss_nas_nems_v1.json",
@@ -43,5 +47,15 @@
     "android/src/main/assets/scales360_art/scale_apgar.webp",
     "android/src/main/assets/scales360_art/scale_capurro.webp",
     "android/src/main/assets/scales360_art/scale_norton.webp"
-  ]
+  ],
+  "source_count": 86,
+  "merged_catalog": "merged/escalas_clinicas_v2_191_fichas.json",
+  "patch_directory": "../integration/patch/",
+  "original_source": {
+    "repository": "https://github.com/iDreyK-ii/Enfermer-a-app",
+    "branch": "desarrollo",
+    "baseline_commit": "90acfca6d1ee47361271be3b2384913032858e46",
+    "write_status": "BLOCKED_BY_GITHUB_APP_REPOSITORY_SELECTION",
+    "note": "El paquete de parche está preparado, pero no se ha escrito en el repositorio original ni ejecutado su CI."
+  }
 }
